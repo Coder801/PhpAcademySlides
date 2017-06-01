@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Основы HTML</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<style media="screen">
+		.text-center {
+			text-align: center;
+		}
+		.shower.full .slide .next {
+			opacity: 0;
+			-webkit-transform: translateY(-50px);
+			-ms-transform: translateY(-50px);
+			transform: translateY(-50px);
+			-webkit-transition: .6s ease;
+			-o-transition: .6s ease;
+			transition: .6s ease;
+		}
+		.shower.full .slide .next.active {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+
+		.slide mark.important {
+		    background: #c00;
+		    color: #fff;
+		}
+	</style>
+
+	<header class="caption">
+		<h1>Основы HTML</h1>
+		<p>Онищенко Дмитрий</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2 class="shout shrink">Основы HTML</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.png" alt="">
+		</figure>
+		<style>
+			#cover h2 {
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+			}
+			#cover p a {
+				color:#FFF;
+			}
+			#cover .cover {
+				width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide1">
+		<center>
+			<img class="img" class="cover" src="pictures/slide1/HTML5_Logo_512.png" alt="">
+		</center>
+		<h3 class="text-center">HyperText Markup Language</h3>
+		<p class="text-center">Язык разметки гипертекста</p>
+		<style>
+			#slide1 .img {
+				height: 300px;
+			}
+			#slide1 h3 {
+				font-size: 30px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide2">
+		<h1 class="text-center">Немного истории...</h1>
+		<center>
+			<img class="img" src="pictures/83864644_45095.jpg" alt="">
+		</center>
+		<style>
+		#slide2 {
+			padding-top: 50px;
+		}
+		 #slide2 h1 {
+		 	font-size: 50px;
+			margin-bottom: 20px;
+		 }
+		 #slide2 img {
+		 	max-width: 100%;
+		 }
+		</style>
+	</section>
+
+	<section class="slide" id="slide3">
+		<p class="text-center">Язык HTML был разработан британским учёным Тимом Бернерсом-Ли приблизительно в 1986—1991 годах в стенах CERN в Женеве в Швейцарии</p>
+		<img src="pictures/Tim-Berners-Lee-1.jpg" alt="">
+		<ul>
+			<li>HTML 0.9;</li>
+			<li>HTML 2.0, одобренный как стандарт 22 сентября 1995 года;</li>
+			<li>HTML 3.0 — март 1995 года;</li>
+			<li>HTML 4.0 — 18 декабря 1997 года;</li>
+			<li>HTML 4.01 24 декабря 1999 года;</li>
+			<li>HTML5 — 20 ноября 2007 года;</li>
+			<li>HTML 5.1 начал разрабатываться 17 декабря 2012 года.</li>
+		</ul>
+		<style>
+		 #slide3 p {
+		 	font-size: 24px;
+		 }
+		 #slide3 img {
+		 	max-width: 40%;
+			float: left;
+			margin-right: 7%;
+		 }
+		 #slide3 ul {
+		 	margin-top: -10px;
+		 	overflow: hidden;
+		 	font-size: 17px;
+		 }
+		</style>
+	</section>
+
+	<section class="slide" id="slide4">
+		<center>
+			<img class="img" src="pictures/W3_Icon.svg.png" alt="">
+		</center>
+		<h3 class="text-center">World Wide Web Consortium <strong>W3C</strong> <br><small>(Консорциум Всемирной паутины)</small></h3>
+		<style>
+		 #slide4 {
+		 	padding: 0;
+		 }
+		 #slide4 img {
+		 	max-width: 40%;
+			margin-top: 10%;
+		 }
+		 #slide4 h3 {
+		 	font-size: 40px;
+		 }
+		 #slide4 small {
+		 	font-size: 30px;
+		 }
+		</style>
+	</section>
+
+	<section class="slide" id="slide5">
+		<h2>Редакторы</h2>
+		<ul>
+			<li><img src="pictures/slide2/d8548f4ce56f1599.png" alt="" class="img"> Atom</li>
+			<li><img src="pictures/slide2/Sublime_Text_Logo.png" alt="" class="img"> Sublime</li>
+			<li><img src="pictures/slide2/1200px-Brackets_Icon.svg.png" alt="" class="img"> Brackets</li>
+			<li><img src="pictures/slide2/Notepad_plus_plus.png" alt="" class="img"> Nodepad++</li>
+			<li>etc ...</li>
+		</ul>
+		<style>
+			#slide5 .img {
+				width: 50px;
+				position: relative;
+				top: 12px;
+				margin-right: 30px;
+			}
+			#slide5 ul {
+				list-style: none;
+			}
+			#slide5 li {
+				font-size: 36px;
+				color: #676767;
+			}
+			#slide5 li::before {
+				opacity: 0;
+			}
+		</style>
+	</section>
+
+
+	<section class="slide" id="slide6">
+		<h2>Материалы и документация</h2>
+		<ul>
+			<li><a href="http://htmlbook.ru/html5">htmlbook.ru</a></li>
+			<li><a href="https://developer.mozilla.org/ru/docs/HTML/HTML5">developer.mozilla.org</a></li>
+			<li><a href="https://www.w3.org/html/">W3C.org - (World Wide Web Consortium)</a></li>
+			<li><a href="https://caniuse.com/">Can I use</a></li>
+			<li><a href="http://htmlreference.io/">htmlreference</a></li>
+		</ul>
+		<style>
+			#slide6 ul {
+				margin-top: -20px;
+			}
+			#slide6 li {
+				font-size: 40px;
+			}
+			#slide6 li a {
+				background: none;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide7">
+		<h2>Пример простой страницы</h2>
+		<pre class="next">
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code>&lt;head&gt;</code>
+			<code>    &lt;title&gt;HTML First page&lt;/title&gt;</code>
+			<code>&lt;/head&gt;</code>
+			<code>&lt;body&gt;</code>
+			<code class="mark">	&lt;h1&gt;Hello world!&lt;h1&gt; </code>
+			<code>&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+		<style>
+			#slide7 code {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide8">
+		<h2>Структура HTML документа</h2>
+		<pre class="next">
+			<code><mark>&lt;!DOCTYPE html&gt;</mark> <span class="comment">&lt;!-- Декларация --&gt;</span></code>
+			<code><mark>&lt;html lang="en"&gt;</mark> <span class="comment">&lt;!-- Начало HTML документа --&gt;</span></code>
+			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Служебная информация--&gt;</span></code>
+			<code>    <mark>&lt;title&gt;HTML First page&lt;/title&gt;</mark> <span class="comment">&lt;!-- Заголовок --&gt;</span></code>
+			<code>&lt;/head&gt;</code>
+			<code>&lt;body&gt;</code>
+			<code class="mark">	&lt;h1&gt;Hello world!&lt;h1&gt; </code>
+			<code>&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+		<style>
+			#slide8 code {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide8_1">
+		<h3>DOCTYPE - указывает, в соответствии с каким стандартом HTML написана ваша Web-страница.</h3>
+		<table>
+			<tr>
+				<td>!DOCTYPE html</td>
+				<td>Для всех документов.</td>
+			</tr>
+			<tr>
+				<td>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"<br>"http://www.w3.org/TR/html4/strict.dtd"></td>
+				<td>Строгий синтаксис HTML</td>
+			</tr>
+			<tr>
+				<td>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" <br>"http://www.w3.org/TR/html4/loose.dtd"</td>
+				<td>Переходный синтаксис HTML.</td>
+			</tr>
+			<tr>
+				<td>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" <br>"http://www.w3.org/TR/html4/frameset.dtd"</td>
+				<td>В HTML-документе применяются фреймы.</td>
+			</tr>
+		</table>
+		<style>
+			#slide8_1 h3 {
+				line-height: 1.2;
+				margin-bottom: 30px;
+			}
+			#slide8_1 table {
+				font-size: 17px;
+			}
+			#slide8_1 table td {
+				padding-top: 15px;
+				padding-bottom: 15px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide9">
+		<h2>Meta-теги (keywords, description, robots)</h2>
+		<pre>
+			<code>...</code>
+			<code>&lt;head&gt;</code>
+			<code class="mark">	&lt;title&gt;HTML First page&lt;/title&gt;</code>
+			<code class="mark">	&lt;meta name="description" content="Page description" /&gt;</code>
+			<code class="mark">	&lt;meta name="keywords" content="HTML,CSS,JavaScript" /&gt;</code>
+			<code class="mark">	&lt;meta name=“robots” content=“noindex,nofollow”&gt;</code>
+			<code class="mark">	&lt;link type="text/css" rel="stylesheet" href="style.css"&gt;</code>
+			<code class="mark">	&lt;script src="script.js&gt;&lt;/script&gt;</code>
+			<code>&lt;/head&gt;</code>
+			<code>...</code>
+		</pre>
+		<style>
+			#slide9 code {
+				font-size: 18px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide10">
+		<h2>Структура HTML документа</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code>&lt;head&gt;</mark></code>
+			<code>    &lt;title&gt;HTML First page&lt;/title&gt;</mark></code>
+			<code>&lt;/head&gt;</code>
+			<code><mark>&lt;body&gt;</mark> <span class="comment">&lt;!-- Тело документа --&gt;</span></code>
+			<code class="mark">	<mark>&lt;h1&gt;Hello world!&lt;h1&gt;</mark> <span class="comment">&lt;!-- Тег заголовка --&gt;</span></code>
+			<code>&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+		<style>
+			#slide10 code {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+
+	<section class="slide" id="slide11">
+		<h2>Комментарии</h2>
+		<pre>
+			<code>	...</code>
+			<code>&lt;body&gt;</code>
+			<code>	&lt;section class="mainarea"&gt; <span class="comment"><mark>&lt;!-- Главный контейнер --&gt;</mark></span></code>
+			<code>  		... </code>
+			<code>	&lt;/section&gt;</code>
+			<code>	&lt;aside class="sidebar"&gt; <span class="comment"><mark>&lt;!-- Боковое меню --&gt;</mark></span></code>
+			<code>	  	... </code>
+			<code>	&lt;/aside&gt; </code>
+			<code>&lt;/body&gt;</code>
+		</pre>
+		<style>
+			#slide11 code {
+				font-size: 22px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide12">
+		<h2>Элементы HTML (теги, атрибуты)</h2>
+		<center>
+			<img style="max-width: 90%" src="pictures/slide9/element.jpg" alt="">
+		</center>
+	</section>
+
+	<section class="slide" id="slide13">
+		<h2>Заголовки</h2>
+		<ul>
+			<li>
+				<h1>&lt;h1&gt;Заголовок &lt;/h1&gt;</h1></li>
+			<li>
+				<h2>&lt;h2&gt;Заголовок &lt;/h2&gt;</h2></li>
+			<li>
+				<h3>&lt;h3&gt;Заголовок &lt;/h3&gt;</h3></li>
+			<li>
+				<h4>&lt;h4&gt;Заголовок &lt;/h4&gt;</h4></li>
+			<li>
+				<h5>&lt;h5&gt;Заголовок &lt;/h5&gt;</h5></li>
+			<li>
+				<h6>&lt;h6&gt;Заголовок &lt;/h6&gt;</h6></li>
+		</ul>
+		<style>
+			#slide13 li h1,
+			#slide13 li h2,
+			#slide13 li h3,
+			#slide13 li h4,
+			#slide13 li h5,
+			#slide13 li h6 {
+				color: #333;
+				margin: 0px 60px;
+			}
+			#slide13 li h1 {
+				font-size: 30px;
+				font-weight: bold;
+				display: inline-block;
+			}
+
+			#slide13 li h2 {
+				font-size: 26px;
+				font-weight: bold;
+				display: inline-block;
+			}
+
+			#slide13 li h3 {
+				font-size: 22px;
+				font-weight: bold;
+				display: inline-block;
+			}
+
+			#slide13 li h4 {
+				font-size: 18px;
+				font-weight: bold;
+				display: inline-block;
+			}
+
+			#slide13 li h5 {
+				font-size: 16px;
+				font-weight: bold;
+				display: inline-block;
+			}
+
+			#slide13 li h6 {
+				font-size: 14px;
+				font-weight: bold;
+				display: inline-block;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide14">
+		<h2>Параграф, Форматирование текста</h2>
+		<p style="font-size: 30px" class="next">Тег <strong>&lt;p&gt;</strong> - определяет параграф</p>
+		<h3 class="next">Форматирование текста</h3>
+		<ul>
+			<li class="next">
+				<p>&lt;strong&gt; <mark><strong>Выделеный текст</strong></mark> &lt;/strong&gt;</p>
+			</li>
+			<li class="next">
+				<p>&lt;em&gt; <mark><em>Курсив</em></mark> &lt;/em&gt;</p>
+			</li>
+			<li class="next">
+				<p>&lt;ins&gt; <mark><ins>Подчеркнет</ins></mark> &lt;/ins&gt; или &lt;strike&gt;<mark><strike>перечернет</strike></mark>&lt;/strike&gt; текст</p>
+			</li>
+			<li class="next">
+				<p>&lt;sub&gt; <mark><sub>Нижний</sub></mark> &lt;/sub&gt; или &lt;sup&gt; <mark><sup>верхний</sup></mark> &lt;/sup&gt; индекс</p>
+			</li>
+		</ul>
+		<style>
+			#slide14 ul {
+				margin-top: 0;
+			}
+			#slide14 ul p {
+				display: inline-block;
+				margin: 0 50px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide15">
+		<h2>Гиперссылки</h2>
+		<pre>
+			<code>&lt;body&gt;</code>
+			<code class="mark">	<mark>&lt;a href="www.google.com"&gt;Google.com&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на внешний ресурс --&gt;</span></code>
+			<code class="mark">	<mark>&lt;a href="/about.html"&gt;About&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на другую HTML-страницу --&gt;</span></code>
+			<code class="mark">	<mark>&lt;a href="#header"&gt;Back to top&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на ресурс внутри документа --&gt;</span></code>
+			<code class="mark">	<mark>&lt;a href="mailto:joe@example.com"&gt;Send mail&lt;/a&gt;</mark> <span class="comment">&lt;!-- Почтовая ссылка --&gt;</span></code>
+			<code>&lt;/body&gt;</code>
+		</pre>
+		<style>
+			#slide15 code {
+				font-size: 18px;
+			}
+		</style>
+	</section>
+
+
+	<section class="slide" id="slide16">
+		<h2>Работа с изображениями</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="en"&gt;</code>
+			<code>&lt;head&gt;</mark></code>
+			<code>    &lt;title&gt;Picture&lt;/title&gt;</mark></code>
+			<code>&lt;/head&gt;</code>
+			<code>&lt;body&gt;</code>
+			<code class="mark">	<mark>&lt;img src="img/some-image.jpg" alt=""/&gt;</mark> <span class="comment">&lt;!-- Изображение --&gt;</span></code>
+			<code>&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+		<style>
+			#slide16 code {
+				font-size: 20px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide17">
+		<h2>Списки</h2>
+		<div class="box">
+			<div class="left">
+				<pre>
+					<code><mark>&lt;ul&gt;</mark></code>
+					<code>	&lt;li&gt;Coffee&lt;/li&gt;</code>
+					<code>	&lt;li&gt;Tea&lt;/li&gt;</code>
+					<code>	&lt;li&gt;Milk&lt;/li&gt;</code>
+					<code><mark>&lt;/ul&gt;</mark></code>
+				</pre>
+			</div>
+			<div class="right">
+				<ul>
+					<li>Coffee</li>
+				  <li>Tea</li>
+				  <li>Milk</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<style>
+			#slide17 code {
+				font-size: 20px;
+			}
+			#slide17 .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr
+			}
+			#slide17 .right {
+				padding-top: 26px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide18">
+		<h2>Списки</h2>
+		<div class="box">
+			<div class="left">
+				<pre>
+					<code><mark>&lt;ol&gt;</mark></code>
+					<code>	&lt;li&gt;Coffee&lt;/li&gt;</code>
+					<code>	&lt;li&gt;Tea&lt;/li&gt;</code>
+					<code>	&lt;li&gt;Milk&lt;/li&gt;</code>
+					<code><mark>&lt;/ol&gt;</mark></code>
+				</pre>
+			</div>
+			<div class="right">
+				<ol>
+					<li>Coffee</li>
+				  <li>Tea</li>
+				  <li>Milk</li>
+				</ol>
+			</div>
+		</div>
+		</div>
+		<style>
+			#slide18 code {
+				font-size: 20px;
+			}
+			#slide18 .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr
+			}
+			#slide18 .right {
+				padding-top: 26px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide19">
+		<h2>Списки</h2>
+		<div class="box">
+			<div class="left">
+				<pre>
+					<code><mark>&lt;dl&gt;</mark></code>
+					<code>	&lt;dt&gt;Coffee&lt;/dt&gt;</code>
+					<code>	&lt;dd&gt;Black hot drink&lt;/dd&gt;</code>
+					<code>	&lt;dt&gt;Milk&lt;/dt&gt;</code>
+					<code>	&lt;dd&gt;White cold drink&lt;/dd&gt;</code>
+					<code><mark>&lt;/dl&gt;</mark></code>
+				</pre>
+			</div>
+			<div class="right">
+				<dl>
+				  <dt>Coffee</dt>
+				  <dd>Black hot drink</dd>
+				  <dt>Milk</dt>
+				  <dd>White cold drink</dd>
+				</dl>
+			</div>
+		</div>
+		<style>
+			#slide19 code {
+				font-size: 20px;
+			}
+			#slide19 .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr
+			}
+			#slide19 .right {
+				padding-top: 26px;
+			}
+			#slide19 dd {
+				margin-left: 30px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide20">
+		<h2>Iframe</h2>
+		<div class="box">
+			<div class="left">
+				<pre>
+					<code>&lt;!DOCTYPE html&gt;</code>
+					<code class="mark">&lt;html lang="en"&gt;</code>
+					<code>&lt;head&gt;</code>
+					<code> <mark>&lt;iframe src="https://www.w3schools.com"&gt;</mark></code>
+					<code>  &lt;p&gt;browser does not support iframes.&lt;/p&gt;</code>
+					<code> <mark>&lt;/iframe&gt;</mark></code>
+					<code>&lt;/head&gt;</code>
+				</pre>
+			</div>
+			<div class="right">
+				<iframe src="https://www.w3schools.com">
+				  <p>Browser does not support iframes.</p>
+				</iframe>
+			</div>
+		</div>
+		<style>
+			#slide20 code {
+				font-size: 15px;
+			}
+			#slide20 .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr
+			}
+			#slide20 .left {
+				overflow: hidden;
+			}
+			#slide20 .right {
+				padding-left: 30px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide21">
+		<h2>Таблицы</h2>
+		<div class="box">
+			<div class="left">
+				<pre>
+					<code> <mark>&lt;table&gt;</mark></code>
+					<code>	<mark>&lt;tr&gt;</mark></code>
+					<code>		<mark>&lt;th&gt;</mark> <mark class="important">Locavore</mark> <mark>&lt;th&gt;</mark></code>
+					<code>		<mark>&lt;th&gt;</mark> ... <mark>&lt;th&gt;</mark></code>
+					<code>	<mark>&lt;/tr&gt;</mark></code>
+					<code>	<mark>&lt;tr&gt;</mark></code>
+					<code>		<mark>&lt;td&gt;</mark> <mark class="important">Fingerstache</mark> <mark>&lt;/td&gt;</mark></code>
+					<code>		<mark>&lt;td&gt;</mark> ... <mark>&lt;/td&gt;</mark></code>
+					<code>	<mark>&lt;/tr&gt;</mark></code>
+					<code> <mark>&lt;/table&gt;</mark></code>
+				</pre>
+			</div>
+			<div class="right">
+				<table>
+					<tr>
+						<th><mark class="important">Locavore</mark></th>
+						<th>Umami</th>
+					</tr>
+					<tr>
+						<td><mark class="important">Fingerstache</mark></td>
+						<td>Kale</td>
+					</tr>
+					<tr>
+						<td>Sriracha</td>
+						<td>Gluten-free</td>
+					</tr>
+					<tr>
+						<td>Thundercats</td>
+						<td>Jean</td>
+					</tr>
+					<tr>
+						<td>Terry</td>
+						<td>Richardson</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<style>
+			#slide21 code {
+				font-size: 15px;
+			}
+			#slide21 table {
+				font-size: 18px;
+			}
+			#slide21 .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr
+			}
+			#slide21 .right {
+				padding-left: 20px;
+				overflow: hidden;
+			}
+			#slide21 .right {
+				padding-left: 30px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide22">
+		<h2>Формы</h2>
+		<div class="box">
+			<div class="left">
+					<pre>
+						<code><mark>&lt;form&gt;</mark></code>
+						<code>	First name:&lt;br&gt;</code>
+						<code>	&lt;input type="text" name="firstname"&gt;</code>
+						<code>	Last name:&lt;br&gt;</code>
+						<code>	&lt;input type="text" name="lastname"&gt;</code>
+						<code>	&lt;input type="radio" name="gender" value="male" checked&gt; Male</code>
+  					<code>	&lt;input type="radio" name="gender" value="female"&gt; Female</code>
+  					<code>	&lt;input type="radio" name="gender" value="other"&gt; Other</code>
+						<code>	&lt;select class="" name=""&gt;</code>
+						<code>		&lt;option value="option"&gt; Option 1 &lt;/option&gt;</code>
+						<code>		&lt;option value="option"&gt; Option 2 &lt;/option&gt;</code>
+						<code>		&lt;option value="option"&gt; Option 3 &lt;/option&gt;</code>
+						<code>	&lt;/select&gt;</code>
+						<code>	&lt;input type="submit" value="Submit"&gt;</code>
+						<code><mark>&lt;/form&gt;</mark></code>
+					</pre>
+			</div>
+			<div class="right">
+				<form>
+					<fieldset>
+					  First name:
+					  <input type="text" name="firstname">Last name:
+					  <input type="text" name="lastname">
+					  <input type="radio" name="gender" value="male" checked> Male<br>
+					  <input type="radio" name="gender" value="female"> Female<br>
+					  <input type="radio" name="gender" value="other"> Other
+						<select class="" name="">
+							<option value="option">Option 1</option>
+							<option value="option">Option 2</option>
+							<option value="option">Option 3</option>
+						</select>
+	  				<input type="submit" value="Submit">
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	<style>
+		#slide22 code {
+			font-size: 12px;
+		}
+		#slide22 .box {
+			display: grid;
+			height: 100%;
+			grid-template-columns: 1fr 1fr
+		}
+		#slide22 .right {
+			padding-left: 20px;
+			overflow: hidden;
+		}
+		#slide22 .right {
+			padding-left: 30px;
+		}
+		#slide22 form {
+			font-size: 15px;
+		}
+		#slide22 form input, #slide19 form select {
+			display: block;
+		}
+		#slide22 form select {
+			margin-bottom: 30px;
+		}
+		#slide22 form fieldset {
+			border: 1px solid #ccc;
+			padding: 20px;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		#slide22 form input[type="radio"] {
+			display: inline-block;
+		}
+	</style>
+	</section>
+
+	<section class="slide" id="slide23">
+		<h2 class="text-center">Ура, мы знаем HTML, и можем создавать замечательные сайты!</h2>
+		<center>
+			<img src="pictures/tenor.gif" alt="">
+		</center>
+		<style>
+			#slide23 img {
+				width: 400px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide24">
+		<h2 class="shout shrink">No</h2>
+	</section>
+
+	<section class="slide" id="slide25">
+		<figure>
+			<img class="cover" src="pictures/slide20/netscape.jpg" alt="">
+		</figure>
+	</section>
+
+	<section class="slide" id="slide26">
+		<h2 class="shout shrink"><img src="pictures/slide20/preview-css3logo.png" alt=""></h2>
+		<h3 class="text-center">CSS - Cascading Style Sheets</h3>
+		<style>
+			#slide26 img {
+				width: 300px;
+			}
+		</style>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
