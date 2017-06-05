@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Основы HTML</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<style media="screen">
+		html {
+			font-size: 16px;
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		h1 {
+		  font-size: 3rem;
+		}
+		h2 {
+		  font-size: 2.5rem;
+		}
+		h3 {
+		  font-size: 2rem;
+		}
+		small {
+			font-size: 75%;
+			opacity: .7;
+		}
+		.text-center {
+			text-align: center;
+		}
+		.shower.full .slide .next {
+			opacity: 0;
+			-webkit-transform: translateY(-50px);
+			-ms-transform: translateY(-50px);
+			transform: translateY(-50px);
+			-webkit-transition: .6s ease;
+			-o-transition: .6s ease;
+			transition: .6s ease;
+		}
+		.shower.full .slide .next.active {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+		.slide mark.important {
+		    background: #c00;
+		    color: #fff;
+		}
+		.selector {
+			color: #365dcd;
+		}
+		.property {
+			color: #ff0000;
+		}
+		.value {
+			color: #c000cc;
+		}
+	</style>
+
+	<header class="caption">
+		<h1>Основы JS</h1>
+		<p>Онищенко Дмитрий</p>
+	</header>
+
+	<section class="slide index" id="cover">
+		<h2 class="shout shrink">Основы JS</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.png" alt="">
+		</figure>
+		<style>
+			.index h2 {
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+			}
+			.index p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+			}
+			.index p a {
+				color:#FFF;
+			}
+			.index .cover {
+				width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Язык Javascript</h2>
+		<figure>
+			<center>
+				<img width="250" src="pictures/js.png" alt="">
+				<p>Однопоточный, динамической, асинхронный язык программирования</p>
+			</center>
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Справочники и спецификации</h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/ru/">Mozilla Developer Network</a></li>
+			<li><a href="http://msdn.microsoft.com/">MSDN</a></li>
+			<li><a href="https://developer.apple.com/library/safari/navigation/index.html">Safari Developer Library</a></li>
+			<li><a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">Спецификация ECMAScript (rus)</a></li>
+		</ul>
+	</section>
+
+	<section class="slide plan">
+		<h2>Зарезервированные слова</h2>
+		<div class="box">
+				<ul>
+					<li>break</li>
+					<li>default</li>
+					<li>function</li>
+					<li>return</li>
+					<li>var</li>
+					<li>case</li>
+					<li>delete</li>
+					<li>if</li>
+					<li>switch</li>
+					<li>throw</li>
+				</ul>
+				<ul>
+				<li>void</li>
+					<li>catch</li>
+					<li>do</li>
+					<li>in</li>
+					<li>this</li>
+					<li>while</li>
+					<li>const</li>
+					<li>else</li>
+					<li>instanceof</li>
+				</ul>
+				<ul>
+					<li>with</li>
+					<li>continue</li>
+					<li>finally</li>
+					<li>let</li>
+					<li>try</li>
+					<li>debugger</li>
+					<li>for</li>
+					<li>new</li>
+					<li>typeof</li>
+			</ul>
+		</div>
+		<style media="screen">
+			.plan {
+				padding-top: 60px;
+			}
+			.plan .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr 1fr
+			}
+			.plan .box ul {
+				font-size: 22px;
+			}
+		</style>
+	</section>
+
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
