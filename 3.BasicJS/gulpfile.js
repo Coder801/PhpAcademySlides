@@ -106,7 +106,10 @@ gulp.task('watch', () => {
 });
 
 gulp.task('connect', function() {
-	connect.server();
+	connect.server({
+		root: 'prepared',
+    livereload: true
+	});
 });
 
 gulp.task('clean', () => {
