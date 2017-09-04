@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+	<style media="screen">
+		.text-center {
+			text-align: center;
+		}
+		.shower.full .slide .next {
+			opacity: 0;
+			-webkit-transform: translateY(-50px);
+			-ms-transform: translateY(-50px);
+			transform: translateY(-50px);
+			-webkit-transition: .6s ease;
+			-o-transition: .6s ease;
+			transition: .6s ease;
+		}
+		.shower.full .slide .next.active {
+			opacity: 1;
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
+		}
+
+		.slide mark.important {
+    background: #c00;
+    color: #fff;
+}
+	</style>
+
+	<header class="caption">
+		<h1>DOM</h1>
+		<p>Онищенко Дмитрий</p>
+	</header>
+
+	<section class="slide">
+		<h2>DOM (Document Object Model)</h2>
+		<p>Объектная модель, используемая для XML/HTML-документов.</p>
+		<p>Документ является иерархией. Каждый HTML-тег образует отдельный элемент-узел, каждый фрагмент текста - текстовый элемент, и т.п.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Пример DOM</h2>
+		<center>
+			<img src="./img/dom.png" alt="">
+		</center>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+
+</body>
+</html>
