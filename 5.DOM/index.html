@@ -1,61 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Shower Presentation Engine</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
 </head>
+
 <body class="shower list">
+    <style media="screen">
+    .text-center {
+        text-align: center;
+    }
 
-	<style media="screen">
-		.text-center {
-			text-align: center;
-		}
-		.shower.full .slide .next {
-			opacity: 0;
-			-webkit-transform: translateY(-50px);
-			-ms-transform: translateY(-50px);
-			transform: translateY(-50px);
-			-webkit-transition: .6s ease;
-			-o-transition: .6s ease;
-			transition: .6s ease;
-		}
-		.shower.full .slide .next.active {
-			opacity: 1;
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
-		}
+    .shower.full .slide .next {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transition: .6s ease;
+        -o-transition: .6s ease;
+        transition: .6s ease;
+    }
 
-		.slide mark.important {
-    background: #c00;
-    color: #fff;
-}
-	</style>
+    .shower.full .slide .next.active {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
 
-	<header class="caption">
-		<h1>DOM</h1>
-		<p>Онищенко Дмитрий</p>
-	</header>
-
-	<section class="slide">
-		<h2>DOM (Document Object Model)</h2>
-		<p>Объектная модель, используемая для XML/HTML-документов.</p>
-		<p>Документ является иерархией. Каждый HTML-тег образует отдельный элемент-узел, каждый фрагмент текста - текстовый элемент, и т.п.</p>
-	</section>
-
-	<section class="slide">
-		<h2>Пример DOM</h2>
-		<center>
-			<img src="./img/dom.png" alt="">
-		</center>
-	</section>
-
-	<div class="progress"></div>
-
-	<script src="node_modules/shower-core/shower.min.js"></script>
-
+    .slide mark.important {
+        background: #c00;
+        color: #fff;
+    }
+    </style>
+    <header class="caption">
+        <h1>DOM</h1>
+        <p>Онищенко Дмитрий</p>
+    </header>
+    <section class="slide">
+        <h2>DOM (Document Object Model)</h2>
+        <p>Объектная модель, используемая для XML/HTML-документов.</p>
+        <p>Документ является иерархией. Каждый HTML-тег образует отдельный элемент-узел, каждый фрагмент текста - текстовый элемент, и т.п.</p>
+    </section>
+    <section class="slide">
+        <h2>Пример DOM</h2>
+        <center>
+            <img src="./img/dom.png" alt="">
+        </center>
+    </section>
+    <section class="slide">
+        <h2>Типы узлов</h2>
+        <table>
+	        <tr>
+	            <td>1</td>
+	            <td>ELEMENT_NODE</td>
+	            <td>Узел элемента</td>
+	        </tr>
+	        <tr>
+	            <td>3</td>
+	            <td>TEXT_NODE</td>
+	            <td>Текстовый узел (#text)</td>
+	        </tr>
+	        <tr>
+	            <td>7</td>
+	            <td>PROCESSING_INSTRUCTION_NODE</td>
+	            <td>Узел инструкции обработки</td>
+	        </tr>
+	        <tr>
+	            <td>8</td>
+	            <td>COMMENT_NODE</td>
+	            <td>Узел комментария (#comment)</td>
+	        </tr>
+	        <tr>
+	            <td>9</td>
+	            <td>DOCUMENT_NODE</td>
+	            <td>Узел документа (#document)</td>
+	        </tr>
+	        <tr>
+	            <td>10</td>
+	            <td>DOCUMENT_TYPE_NODE</td>
+	            <td>Узел типа документа</td>
+	        </tr>
+	        <tr>
+	            <td>11</td>
+	            <td>DOCUMENT_FRAGMENT_NODE</td>
+	            <td>Узел фрагмента документа</td>
+	        </tr>
+	    </table>
+    </section>
+    
+    <div class="progress"></div>
+    <script src="node_modules/shower-core/shower.min.js"></script>
 </body>
+
 </html>

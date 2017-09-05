@@ -1,61 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Shower Presentation Engine</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
 </head>
+
 <body class="shower list">
+    <style media="screen">
+    .text-center {
+        text-align: center;
+    }
 
-	<style media="screen">
-		.text-center {
-			text-align: center;
-		}
-		.shower.full .slide .next {
-			opacity: 0;
-			-webkit-transform: translateY(-50px);
-			-ms-transform: translateY(-50px);
-			transform: translateY(-50px);
-			-webkit-transition: .6s ease;
-			-o-transition: .6s ease;
-			transition: .6s ease;
-		}
-		.shower.full .slide .next.active {
-			opacity: 1;
-			-webkit-transform: translateY(0);
-			-ms-transform: translateY(0);
-			transform: translateY(0);
-		}
+    .shower.full .slide .next {
+        opacity: 0;
+        -webkit-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        transform: translateY(-50px);
+        -webkit-transition: .6s ease;
+        -o-transition: .6s ease;
+        transition: .6s ease;
+    }
 
-		.slide mark.important {
-    background: #c00;
-    color: #fff;
-}
-	</style>
+    .shower.full .slide .next.active {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+    }
 
-	<header class="caption">
-		<h1>DOM</h1>
-		<p>Онищенко Дмитрий</p>
-	</header>
+    .slide mark.important {
+        background: #c00;
+        color: #fff;
+    }
 
-	<section class="slide">
-		<h2>DOM (Document Object Model)</h2>
-		<p>Объектная модель, используемая для XML/HTML-документов.</p>
-		<p>Документ является иерархией. Каждый HTML-тег образует отдельный элемент-узел, каждый фрагмент текста - текстовый элемент, и т.п.</p>
-	</section>
+    p > .mark, li > .mark {
+        background: #f9f2f4;
+        color: #c7254e;
+        display: inline-block;
+        padding: 0 10px;
+    }
+    ul > li {
+        text-indent: 0em !important;
+    }
+    </style>
+    <header class="caption">
+        <h1>DOM</h1>
+        <p>Онищенко Дмитрий</p>
+    </header>
+    <section class="slide">
+        <h2>DOM (Document Object Model)</h2>
+        <p>Объектная модель, используемая для XML/HTML-документов.</p>
+        <p>Документ является иерархией. Каждый HTML-тег образует отдельный элемент-узел, каждый фрагмент текста - текстовый элемент, и т.п.</p>
+    </section>
+    <section class="slide">
+        <h2>Пример DOM</h2>
+        <center>
+            <img src="./img/dom.png" alt="">
+        </center>
+    </section>
+    <section class="slide">
+        <h2>Типы узлов</h2>
+        <table>
+	        <tr class="mark">
+	            <td>1</td>
+	            <td>ELEMENT_NODE</td>
+	            <td>Узел элемента</td>
+	        </tr>
+	        <tr>
+	            <td>3</td>
+	            <td>TEXT_NODE</td>
+	            <td>Текстовый узел (#text)</td>
+	        </tr>
+	        <tr>
+	            <td>7</td>
+	            <td>PROCESSING_INSTRUCTION_NODE</td>
+	            <td>Узел инструкции обработки</td>
+	        </tr>
+	        <tr>
+	            <td>8</td>
+	            <td>COMMENT_NODE</td>
+	            <td>Узел комментария (#comment)</td>
+	        </tr>
+	        <tr>
+	            <td>9</td>
+	            <td>DOCUMENT_NODE</td>
+	            <td>Узел документа (#document)</td>
+	        </tr>
+	        <tr>
+	            <td>10</td>
+	            <td>DOCUMENT_TYPE_NODE</td>
+	            <td>Узел типа документа</td>
+	        </tr>
+	        <tr>
+	            <td>11</td>
+	            <td>DOCUMENT_FRAGMENT_NODE</td>
+	            <td>Узел фрагмента документа</td>
+	        </tr>
+	    </table>
+    </section>
+    <section class="slide">
+        <h2>Типы узлов</h2>
+        <p><span class="mark">nodeType</span> — Определить тип узла</p>
+        <p><span class="mark">nodeValue</span> — Строка, представляющая значение узла.</p>
+        <p><span class="mark">nodeName</span> — Возвращает имя узла. Если узел является элементом, то свойство nodeName возвращает имя тега.</p>
+        <p><span class="mark">tagName</span> — Возвращает имя тега (только у элементов)</p>
+    </section>
 
-	<section class="slide">
-		<h2>Пример DOM</h2>
-		<center>
-			<img src="./img/dom.png" alt="">
-		</center>
-	</section>
+    <section class="slide">
+        <h2>Навигация по DOM</h2>
+        <p>Самые верхние элементы дерева доступны напрямую из <span class="mark">document.</span></p>
+        <p><span class="mark">HTML</span> = document.documentElement</p>
+        <p><span class="mark">BODY</span> = document.body</p>
+        <p><span class="mark">HEAD</span> = document.head</p>
+    </section>
 
-	<div class="progress"></div>
+    <section class="slide">
+        <h2>Разделение DOM узлов</h2>
+        <p>Дочерние – элементы, которые лежат непосредственно внутри данного..</p>
+        <p>Потомки – все элементы, которые лежат внутри данного, вместе с их детьми, детьми их детей и так далее. То есть, всё поддерево DOM.</p>
+        <p>Родитель – блок в котором находится выше уровня текущего элемента</p>
+        <p>Соседние – элементы находящиеся на одном уровне</p>
+    </section>
 
-	<script src="shower/shower.min.js"></script>
+    <section class="slide">
+        <h2>Дочерние</h2>
+        <p><span class="mark">element.childNodes</span> - Список дочерних узлов</p>
+        <p><span class="mark">element.children</span> - Список дочерних элементов</p>
+        <p><span class="mark">element.firstChild</span> -  Возьмет первый дочерний узел</p>
+        <p><span class="mark">element.firstChildElement</span> -  Возьмет первый дочерний элемент</p>
+        <p><span class="mark">element.lastChild</span> - По аналогии возьмет последний узел</p>
+        <p><span class="mark">element.lastChildElement</span> - По аналогии возьмет последний элемент</p>
+        <p>DOM-коллекции, такие как childNodes и другие. В них нет методов массивов, таких как forEach, map, push, pop и других.</p>
+    </section>
 
+    <section class="slide">
+        <h2>Потомки, соседи</h2>
+        <p><span class="mark">element.previousSibling</span> - Предыдущий элемент в DOM</p>
+        <p><span class="mark">element.nextSibling</span> - Следующий элемент в DOM</p>
+        <p><span class="mark">element.parentNode</span> - Ссылка на узел родителя</p>
+        <p><span class="mark">element.parentElement</span> - Ссылка на родителький элемент</p>
+    </section>
+    
+    <section class="slide">
+        <h2>Особые ссылки для таблиц</h2>
+        <ul style="font-size: 20px;margin: 0;padding: 0;">
+            <li><span class="mark">table.rows</span> – коллекция строк TR таблицы.</li>
+            <li><span class="mark">table.caption/tHead/tFoot</span> – ссылки на элементы таблицы CAPTION, THEAD, TFOOT.</li>
+            <li><span class="mark">table.tBodies</span> – коллекция элементов таблицы TBODY.</li>
+            <li><span class="mark">tbody.rows</span> – коллекция строк TR секции.</li>
+            <li><span class="mark">tr.cells</span> – коллекция ячеек TD/TH</li>
+            <li><span class="mark">tr.sectionRowIndex</span> – номер строки в текущей секции THEAD/TBODY</li>
+            <li><span class="mark">tr.rowIndex</span> – номер строки в таблице</li>
+            <li><span class="mark">td.cellIndex</span> – номер ячейки в строке</li>
+        </ul>
+    </section>
+    
+    <section class="slide">
+        <h2>Выбор элементов</h2>
+        <p style="font-size: 19px;"><span class="mark">document.getElementById('intro')</span> - Выбрать элемент по Id</p>
+        <p style="font-size: 19px;"><span class="mark">getElementsByTagName('p')</span> - Выбрать элемент по тегу</p>
+        <p style="font-size: 19px;"><span class="mark">getElementsByClassName('intro')</span> - Выбрать элемент по классу</p>
+        <p style="font-size: 19px;"><span class="mark">querySelector(".list")</span> - Выбор по CSS классу</p>
+        <p style="font-size: 19px;"><span class="mark">querySelectorAll('.list > li')</span> - Выбор массива элементов по CSS классу</p>
+        <p style="font-size: 19px;"><span class="mark">closest('ul')</span> - ищет ближайший элемент от текущего</p>
+        <p style="font-size: 19px;"><span class="mark">matches('.someClass')</span> - вернет true/false в случае если селектор найден</p>
+    </section>
+
+    <section class="slide">
+        <h2>Выбор элементов по коллекциям</h2>
+        <ul style="font-size: 19px;letter-spacing: 1.5px;">
+            <li><span class="mar">document.anchors</span></li>
+            <li><span class="mar">document.body</span></li>
+            <li><span class="mar">document.documentElement</span></li>
+            <li><span class="mar">document.embeds</span></li>
+            <li><span class="mar">document.forms</span></li>
+            <li><span class="mar">document.head</span></li>
+            <li><span class="mar">document.images</span></li>
+            <li><span class="mar">document.links</span></li>
+            <li><span class="mar">document.scripts</span></li>
+            <li><span class="mar">document.title</span></li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Свойства узлов</h2>
+        <p><span class="mark">innerHTML</span> - HTML находящийся внутри элемента</p>
+        <p><span class="mark">outerHTML</span> - HTML с текущим элементом (только чтение)</p>
+        <p><span class="mark">nodeValue/data</span> - Содержимое других узлов, текстовых или комментариев</p>
+        <p><span class="mark">textContent</span> - Выводит текстовый узел</p>
+        <p><span class="mark">hidden</span> - значение true скроет элемент</p>
+    </section>
+
+    <section class="slide">
+        <h2>Атрибуты DOM элементов</h2>
+        <p><span class="mark">elem.hasAttribute(name)</span> – Проверяет наличие атрибута</p>
+        <p><span class="mark">elem.getAttribute(name)</span> – Получает значение атрибута</p>
+        <p><span class="mark">elem.setAttribute(name, value)</span> – Устанавливает атрибут</p>
+        <p><span class="mark">elem.removeAttribute(name)</span> – Удаляет атрибут</p>
+        <p><span class="mark">elem.attributes</span> - Получить массив аттрибутов</p>
+        <p><span class="mark">elem.dataset.delay</span> - Получить значение data-атрибута</p>
+    </section>
+
+    <section class="slide">
+        <h2>Атрибуты для работа с классами</h2>
+        <p><span class="mark">elem.classList</span> – Доступ к обьекту классов</p>
+        <p><span class="mark">elem.classList.add('className')</span> – Добавить класс</p>
+        <p><span class="mark">elem.classList.remove('className')</span> – Удалить класс</p>
+        <p><span class="mark">elem.classList.toggle('className')</span> – Триггер класса</p>
+        <p><span class="mark">elem.classList.contains('className')</span> - Вернет true если класс есть</p>
+    </section>
+
+    <section class="slide">
+        <h2>Атрибуты для работа с классами</h2>
+        <p><span class="mark">elem.classList</span> – Доступ к обьекту классов</p>
+        <p><span class="mark">elem.classList.add('className')</span> – Добавить класс</p>
+        <p><span class="mark">elem.classList.remove('className')</span> – Удалить класс</p>
+        <p><span class="mark">elem.classList.toggle('className')</span> – Триггер класса</p>
+        <p><span class="mark">elem.classList.contains('className')</span> - Вернет true если класс есть</p>
+    </section>
+
+    <section>
+        <ul>
+            <li><a href="">https://itchief.ru/lessons/javascript/javascript-dom-node-types</a></li>
+            <li><a href="">http://prgssr.ru/development/tehniki-raboty-s-dom-roditelskie-dochernie-i-sosednie-elementy.html</a></li>
+            <li><a href="">https://developer.mozilla.org/ru/docs/Web/API/Node/previousSibling</a></li>
+        </ul>
+    </section>
+    
+    <div class="progress"></div>
+    <script src="shower/shower.min.js"></script>
 </body>
+
 </html>
