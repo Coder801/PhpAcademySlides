@@ -446,7 +446,7 @@
 		<h2>Гиперссылки</h2>
 		<pre>
 			<code>&lt;body&gt;</code>
-			<code class="mark">	<mark>&lt;a href="www.google.com"&gt;Google.com&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на внешний ресурс --&gt;</span></code>
+			<code class="mark">	<mark>&lt;a href="www.google.com" target="_blank"&gt;Google.com&lt;/a&gt;</mark> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Ссылка на внешний ресурс (открывается в новом окне) --&gt;</span></code>
 			<code class="mark">	<mark>&lt;a href="/about.html"&gt;About&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на другую HTML-страницу --&gt;</span></code>
 			<code class="mark">	<mark>&lt;a href="#header"&gt;Back to top&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на ресурс внутри документа --&gt;</span></code>
 			<code class="mark">	<mark>&lt;a href="mailto:joe@example.com"&gt;Send mail&lt;/a&gt;</mark> <span class="comment">&lt;!-- Почтовая ссылка --&gt;</span></code>
@@ -600,14 +600,14 @@
 					<code>&lt;!DOCTYPE html&gt;</code>
 					<code class="mark">&lt;html lang="en"&gt;</code>
 					<code>&lt;head&gt;</code>
-					<code> <mark>&lt;iframe src="https://www.w3schools.com"&gt;</mark></code>
+					<code> <mark>&lt;iframe src="http://localhost:8080"&gt;</mark></code>
 					<code>  &lt;p&gt;browser does not support iframes.&lt;/p&gt;</code>
 					<code> <mark>&lt;/iframe&gt;</mark></code>
 					<code>&lt;/head&gt;</code>
 				</pre>
 			</div>
 			<div class="right">
-				<iframe src="https://www.w3schools.com">
+				<iframe width="450" height="300" src="http://localhost:8080">
 				  <p>Browser does not support iframes.</p>
 				</iframe>
 			</div>
@@ -700,10 +700,10 @@
 			<div class="left">
 					<pre>
 						<code><mark>&lt;form&gt;</mark></code>
-						<code>	First name:&lt;br&gt;</code>
-						<code>	&lt;input type="text" name="firstname"&gt;</code>
-						<code>	Last name:&lt;br&gt;</code>
-						<code>	&lt;input type="text" name="lastname"&gt;</code>
+						<code>	&lt;label for="firstname" &gt;First name:&lt;br&gt;</code>
+						<code>	&lt;input type="text" id="firstname" name="firstname"&gt;</code>
+						<code>	&lt;label for="lastname" &gt;Last name:&lt;br&gt;</code>
+						<code>	&lt;input type="text" id="lastname" name="lastname"&gt;</code>
 						<code>	&lt;input type="radio" name="gender" value="male" checked&gt; Male</code>
   					<code>	&lt;input type="radio" name="gender" value="female"&gt; Female</code>
   					<code>	&lt;input type="radio" name="gender" value="other"&gt; Other</code>
@@ -719,9 +719,10 @@
 			<div class="right">
 				<form>
 					<fieldset>
-					  First name:
-					  <input type="text" name="firstname">Last name:
-					  <input type="text" name="lastname">
+					  <label for="firstname">First name:</label><br>
+					  <input type="text" name="firstname" id="firstname">
+						<label for="lastname">Last name:</label><br>
+					  <input type="text" name="lastname" id="lastname">
 					  <input type="radio" name="gender" value="male" checked> Male<br>
 					  <input type="radio" name="gender" value="female"> Female<br>
 					  <input type="radio" name="gender" value="other"> Other
@@ -735,70 +736,84 @@
 				</form>
 			</div>
 		</div>
-	<style>
-		#slide22 code {
-			font-size: 12px;
-		}
-		#slide22 .box {
-			display: grid;
-			height: 100%;
-			grid-template-columns: 1fr 1fr
-		}
-		#slide22 .right {
-			padding-left: 20px;
-			overflow: hidden;
-		}
-		#slide22 .right {
-			padding-left: 30px;
-		}
-		#slide22 form {
-			font-size: 15px;
-		}
-		#slide22 form input, #slide19 form select {
-			display: block;
-		}
-		#slide22 form select {
-			margin-bottom: 30px;
-		}
-		#slide22 form fieldset {
-			border: 1px solid #ccc;
-			padding: 20px;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-		}
-		#slide22 form input[type="radio"] {
-			display: inline-block;
-		}
-	</style>
+		<style>
+			#slide22 code {
+				font-size: 12px;
+			}
+			#slide22 .box {
+				display: grid;
+				height: 100%;
+				grid-template-columns: 1fr 1fr
+			}
+			#slide22 .right {
+				padding-left: 20px;
+				overflow: hidden;
+			}
+			#slide22 .right {
+				padding-left: 30px;
+			}
+			#slide22 form {
+				font-size: 15px;
+			}
+			#slide22 form input, #slide19 form select {
+				display: block;
+			}
+			#slide22 form select {
+				margin-bottom: 30px;
+			}
+			#slide22 form fieldset {
+				border: 1px solid #ccc;
+				padding: 20px;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			#slide22 form input[type="radio"] {
+				display: inline-block;
+			}
+		</style>
 	</section>
 
 	<section class="slide" id="slide23">
-		<h2 class="text-center">Ура, мы знаем HTML, и можем создавать замечательные сайты!</h2>
-		<center>
-			<img src="pictures/tenor.gif" alt="">
-		</center>
+		<h2>Семантика</h2>
+		<table>
+			<tr>
+				<td><code>&lt;header&gt;</code></td>
+				<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa ut alias blanditiis laboriosam vel. Distinctio dolorum illum culpa, ipsa ducimus officia earum natus amet odio fuga quisquam, iste provident!</td>
+			</tr>
+		</table>
 		<style>
-			#slide23 img {
-				width: 400px;
+			#slide23 {
 			}
 		</style>
 	</section>
 
 	<section class="slide" id="slide24">
-		<h2 class="shout shrink">No</h2>
+		<h2 class="text-center">Ура, мы знаем HTML, и можем создавать замечательные сайты!</h2>
+		<center>
+			<img src="pictures/tenor.gif" alt="">
+		</center>
+		<style>
+			#slide24 img {
+				width: 400px;
+			}
+		</style>
 	</section>
 
 	<section class="slide" id="slide25">
+		<h2 class="shout shrink">No</h2>
+	</section>
+
+	<section class="slide" id="slide26">
 		<figure>
 			<img class="cover" src="pictures/slide20/netscape.jpg" alt="">
 		</figure>
 	</section>
 
-	<section class="slide" id="slide26">
+	<section class="slide" id="slide27">
 		<h2 class="shout shrink"><img src="pictures/slide20/preview-css3logo.png" alt=""></h2>
 		<h3 class="text-center">CSS - Cascading Style Sheets</h3>
 		<style>
-			#slide26 img {
+			#slide27 img {
 				width: 300px;
 			}
 		</style>
