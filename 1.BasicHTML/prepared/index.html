@@ -50,6 +50,13 @@
 			padding-bottom: 2px;
 			line-height: 1.4;
 		}
+
+		.slide pre code:first-child {
+			padding-top: 10px !important;
+		}
+		.slide pre code:last-child {
+			padding-bottom: 10px !important;
+		}
 	</style>
 </head>
 
@@ -120,6 +127,39 @@
 
 			#cover .cover {
 				width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="personal">
+		<img src="./pictures/photo.jpeg" alt="">
+		<div class="info">
+			<h3>Дмитрий Онищенко</h3>
+			<br>
+			<p>Frontend develope в компании Zeo Alliance</p>
+			<p>Более 7 лет занимаюсь разработкой и изучаю веб технологии</p>
+			<p>Контакты:</p>
+			<p><small><span>skype:</span> deline801</small></p>
+			<p><small><span>telegram:</span> +380636126197</small></p>
+			<p><small><span>email:</span> donischenko801@gmail.com</small></p>
+		</div>
+		<style>
+			#personal img {
+				width: 300px;
+				float: left;
+				margin-right: 40px;
+			}
+			#personal .info {
+			}
+			#personal .info h3 {
+				font-size: 34px;
+				font-weight: 600;
+			}
+			#personal .info p {
+				line-height: 1.4;
+			}
+			#personal .info p span {
+				color: #999;
 			}
 		</style>
 	</section>
@@ -302,7 +342,7 @@
 
 	<section class="slide" id="slide8">
 		<h2>Структура HTML документа</h2>
-		<pre>
+		<pre class="html">
 			<code><mark>&lt;!DOCTYPE html&gt;</mark> <span class="comment">&lt;!-- Декларация --&gt;</span></code>
 			<code><mark>&lt;html lang="en"&gt;</mark> <span class="comment">&lt;!-- Начало HTML документа --&gt;</span></code>
 			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Служебная информация--&gt;</span></code>
@@ -359,7 +399,7 @@
 
 	<section class="slide" id="slide9">
 		<h2>Meta-теги (keywords, description, robots)</h2>
-		<pre>
+		<pre class="html">
 			<code>...</code>
 			<code>&lt;head&gt;</code>
 			<code class="mark">	&lt;title&gt;HTML First page&lt;/title&gt;</code>
@@ -380,7 +420,7 @@
 
 	<section class="slide" id="slide10">
 		<h2>Структура HTML документа (Body)</h2>
-		<pre>
+		<pre class="html">
 			<code>&lt;!DOCTYPE html&gt;</code>
 			<code>&lt;html lang="en"&gt;</code>
 			<code>&lt;head&gt;</mark></code>
@@ -403,7 +443,7 @@
 
 	<section class="slide" id="slide11">
 		<h2>Комментарии</h2>
-		<pre>
+		<pre class="html">
 			<code>	...</code>
 			<code>&lt;body&gt;</code>
 			<code>	&lt;section class="mainarea"&gt; <span class="comment"><mark>&lt;!-- Главный контейнер --&gt;</mark></span></code>
@@ -525,7 +565,7 @@
 
 	<section class="slide" id="slide15">
 		<h2>Гиперссылки</h2>
-		<pre>
+		<pre class="html">
 			<code>&lt;body&gt;</code>
 			<code class="mark">	<mark>&lt;a href="www.google.com" target="_blank"&gt;Google.com&lt;/a&gt;</mark> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">&lt;!-- Ссылка на внешний ресурс (открывается в новом окне) --&gt;</span></code>
 			<code class="mark">	<mark>&lt;a href="/about.html"&gt;About&lt;/a&gt;</mark> <span class="comment">&lt;!-- Ссылка на другую HTML-страницу --&gt;</span></code>
@@ -543,7 +583,7 @@
 
 	<section class="slide" id="slide16">
 		<h2>Работа с изображениями</h2>
-		<pre>
+		<pre class="html">
 			<code>&lt;!DOCTYPE html&gt;</code>
 			<code>&lt;html lang="en"&gt;</code>
 			<code>&lt;head&gt;</mark></code>
@@ -566,7 +606,7 @@
 		<p>Тег <mark>&lt;ul&gt;</mark> устанавливает маркированный список</p>
 		<div class="box">
 			<div class="left">
-				<pre>
+				<pre class="html">
 					<code><mark>&lt;ul&gt;</mark></code>
 					<code>	&lt;li&gt;Coffee&lt;/li&gt;</code>
 					<code>	&lt;li&gt;Tea&lt;/li&gt;</code>
@@ -605,7 +645,7 @@
 		<p>Тег <mark>&lt;ol&gt;</mark> устанавливает нумерованный список</p>
 		<div class="box">
 			<div class="left">
-				<pre>
+				<pre class="html">
 					<code><mark>&lt;ol&gt;</mark></code>
 					<code>	&lt;li&gt;Coffee&lt;/li&gt;</code>
 					<code>	&lt;li&gt;Tea&lt;/li&gt;</code>
@@ -644,7 +684,7 @@
 		<p>Тройка элементов <mark>&lt;dl&gt;</mark>, <mark>&lt;dt&gt;</mark>, <mark>&lt;dd&gt;</mark>, предназначенны для создания списка определений</p>
 		<div class="box">
 			<div class="left">
-				<pre>
+				<pre class="html">
 					<code><mark>&lt;dl&gt;</mark></code>
 					<code>	&lt;dt&gt;Coffee&lt;/dt&gt;</code>
 					<code>	&lt;dd&gt;Black hot drink&lt;/dd&gt;</code>
@@ -688,11 +728,11 @@
 		<p>Cоздает плавающий фрейм, который находится внутри обычного документа, он позволяет загружать в область заданных размеров любые другие независимые документы.</p>
 		<div class="box">
 			<div class="left">
-				<pre>
+				<pre class="html">
 					<code>&lt;!DOCTYPE html&gt;</code>
 					<code class="mark">&lt;html lang="en"&gt;</code>
 					<code>&lt;head&gt;</code>
-					<code> <mark>&lt;iframe src="http://localhost:8080"&gt;</mark></code>
+					<code> <mark>&lt;iframe src="http://localhost:8080#slide20"&gt;</mark></code>
 					<code>  &lt;p&gt;browser does not support iframes.&lt;/p&gt;</code>
 					<code> <mark>&lt;/iframe&gt;</mark></code>
 					<code>&lt;/head&gt;</code>
@@ -706,7 +746,7 @@
 		</div>
 		<style>
 			#slide20 {
-			    padding-top: 60px;
+			    padding-top: 100px;
 			}
 			#slide20 code {
 				font-size: 15px;
@@ -734,7 +774,7 @@
 		<p>Таблицы используются только для организации табличных данных... Да ладно...</p>
 		<div class="box">
 			<div class="left">
-				<pre>
+				<pre class="html">
 					<code> <mark>&lt;table&gt;</mark></code>
 					<code>	<mark>&lt;tr&gt;</mark></code>
 					<code>		<mark>&lt;th&gt;</mark> <mark class="important">Locavore</mark> <mark>&lt;th&gt;</mark></code>
@@ -805,7 +845,7 @@
 		<h2>Формы</h2>
 		<div class="box">
 			<div class="left">
-				<pre>
+				<pre class="html">
 						<code><mark>&lt;form&gt;</mark></code>
 						<code>	&lt;label for="firstname"&gt;First name:&lt;/label&gt;&lt;br&gt;</code>
 						<code>	&lt;input type="text" id="firstname" name="firstname"&gt;</code>
@@ -892,53 +932,138 @@
 	<section class="slide" id="slide23">
 		<h2>Семантика</h2>
 		<p>Семантические элементы - элементы которые четко описывают свое предназначение, и понятные как Веб-приложению так и разработчику</p>
-		<ul class="list">
-			<li>article</li>
-			<li>aside</li>
-			<li>details</li>
-			<li>figcaption</li>
-			<li>figure</li>
-			<li>footer</li>
-			<li>header</li>
-			<li>main</li>
-			<li>mark</li>
-			<li>nav</li>
-			<li>section</li>
-			<li>summary</li>
-			<li>time</li>
-		</ul>
+		<div class="left">
+			<pre class="html">
+				<code>&lt;div id="header"&gt; Header &lt;/div&gt;</code>
+				<code>&lt;div id="nav"&gt; Navigation &lt;/div&gt;</code>
+				<code>&lt;div id="wrapper"&gt;</code>
+				<code>	&lt;div id="sidebar"&gt; Sidebar &lt;/div&gt;</code>
+				<code>	&lt;div id="main"&gt; Mainarea &lt;/div&gt;</code>
+				<code>&lt;/div&gt;</code>
+				<code>&lt;div id="footer"&gt; Footer &lt;/div&gt;</code>
+			</pre>
+		</div>
+		<div class="right">
+			<pre class="html">
+				<code>&lt;header&gt; Header &lt;/header&gt;</code>
+				<code>&lt;nav&gt; Navigation &lt;/nav&gt;</code>
+				<code>&lt;main&gt;</code>
+				<code>	&lt;aside&gt; Sidebar &lt;/aside&gt;</code>
+				<code>	&lt;section&gt; Mainarea &lt;/section&gt;</code>
+				<code>&lt;/main&gt;</code>
+				<code>&lt;footer&gt; Footer &lt;/footer&gt;</code>
+			</pre>
+		</div>
 		<style>
-			#slide23 {}
+			#slide23 .left, #slide23 .right {
+				width: 50%;
+				float: left;
+				margin-right: 0;
+			}
+			#slide23 code {
+				font-size: 14px;
+				margin-right: -100px !important;
+				margin-left: -100px !important;
+			}
 		</style>
 	</section>
 
 	<section class="slide" id="slide24">
-		<h2 class="text-center">Ура, мы знаем HTML, и можем создавать замечательные сайты!</h2>
-		<center>
-			<img src="pictures/tenor.gif" alt="">
-		</center>
+		<h2>Семантика</h2>
+		<p>Каждый HTML5 элемент принадлежит к определенной категории. <br>Выделяют следующие общие категории:</p>
+		<table>
+			<tr>
+				<td>1. Мета содержимое</td>
+				<td>5. Текстовое содержимое</td>
+			</tr>
+			<tr>
+				<td>2. Потоковое содержимое</td>
+				<td>6. Встроенное содержимое</td>
+			</tr>
+			<tr>
+				<td>3. Секционное содержимое</td>
+				<td>7. Интерактивное содержимое</td>
+			</tr>
+			<tr>
+				<td>4. Заголовочное содержимое</td>
+				<td></td>
+			</tr>
+		</table>
 		<style>
-			#slide24 img {
-				width: 400px;
+			#slide24 {
+				font-size: 24px;
 			}
 		</style>
 	</section>
 
 	<section class="slide" id="slide25">
-		<h2 class="shout shrink">No</h2>
+		<h2>Семантика</h2>
+		<p>Пример нескольких семантических HTML елементов</p>
+		<table>
+			<tr>
+				<td>header</td>
+				<td>main</td>
+				<td>footer</td>
+			</tr>
+			<tr>
+				<td>section</td>
+				<td>article</td>
+				<td>aside</td>
+			</tr>
+			<tr>
+				<td>figure</td>
+				<td>figcaption</td>
+				<td>nav</td>
+			</tr>
+			<tr>
+				<td>mark</td>
+				<td>summary</td>
+				<td>details</td>
+			</tr>
+			<tr>
+				<td>address</td>
+				<td>time</td>
+				<td>wbr</td>
+			</tr>
+		</table>
+		<style>
+			#slide25 p {
+				font-size: 30px;
+			}
+			#slide25 table tr td {
+				text-align: center !important;
+				font-size: 30px !important;
+			}
+		</style>
 	</section>
 
 	<section class="slide" id="slide26">
+		<h2 class="text-center">Ура, мы знаем HTML, и можем создавать замечательные сайты!</h2>
+		<center>
+			<img src="pictures/tenor.gif" alt="">
+		</center>
+		<style>
+			#slide26 img {
+				width: 400px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="slide27">
+		<h2 class="shout shrink">No</h2>
+	</section>
+
+	<section class="slide" id="slide28">
 		<figure>
 			<img class="cover" src="pictures/slide20/netscape.jpg" alt="">
 		</figure>
 	</section>
 
-	<section class="slide" id="slide27">
+	<section class="slide" id="slide29">
 		<h2 class="shout shrink"><img src="pictures/slide20/preview-css3logo.png" alt=""></h2>
 		<h3 class="text-center">CSS - Cascading Style Sheets</h3>
 		<style>
-			#slide27 img {
+			#slide29 img {
 				width: 300px;
 			}
 		</style>
