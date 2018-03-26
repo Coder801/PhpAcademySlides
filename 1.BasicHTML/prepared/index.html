@@ -41,6 +41,15 @@
 		.slide .left pre code {
 			width: auto;
 		}
+		.slide p mark, .slide table mark {
+			background-color: #cd0000 !important;
+			border-radius: 3px;
+			display: inline-block;
+			color: #fff !important;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			line-height: 1.4;
+		}
 	</style>
 </head>
 
@@ -593,6 +602,7 @@
 
 	<section class="slide" id="slide18">
 		<h2>Списки</h2>
+		<p>Тег <mark>&lt;ol&gt;</mark> устанавливает нумерованный список</p>
 		<div class="box">
 			<div class="left">
 				<pre>
@@ -631,6 +641,7 @@
 
 	<section class="slide" id="slide19">
 		<h2>Списки</h2>
+		<p>Тройка элементов <mark>&lt;dl&gt;</mark>, <mark>&lt;dt&gt;</mark>, <mark>&lt;dd&gt;</mark>, предназначенны для создания списка определений</p>
 		<div class="box">
 			<div class="left">
 				<pre>
@@ -674,6 +685,7 @@
 
 	<section class="slide" id="slide20">
 		<h2>Iframe</h2>
+		<p>Cоздает плавающий фрейм, который находится внутри обычного документа, он позволяет загружать в область заданных размеров любые другие независимые документы.</p>
 		<div class="box">
 			<div class="left">
 				<pre>
@@ -687,34 +699,39 @@
 				</pre>
 			</div>
 			<div class="right">
-				<iframe width="450" height="300" src="http://localhost:8080">
+				<iframe width="450" height="290" src="http://localhost:8080/#slide20">
 				  <p>Browser does not support iframes.</p>
 				</iframe>
 			</div>
 		</div>
 		<style>
+			#slide20 {
+			    padding-top: 60px;
+			}
 			#slide20 code {
 				font-size: 15px;
+				padding-right: 10px;
 			}
-
+			#slide20 p {
+				font-size: 19px;
+				margin-bottom: 40px;
+			}
 			#slide20 .box {
 				display: grid;
-				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
 
 			#slide20 .left {
-				overflow: hidden;
 			}
 
 			#slide20 .right {
-				padding-left: 30px;
 			}
 		</style>
 	</section>
 
 	<section class="slide" id="slide21">
 		<h2>Таблицы</h2>
+		<p>Таблицы используются только для организации табличных данных... Да ладно...</p>
 		<div class="box">
 			<div class="left">
 				<pre>
@@ -756,6 +773,9 @@
 			</div>
 		</div>
 		<style>
+			#slide21 p {
+				font-size: 18px;
+			}
 			#slide21 code {
 				font-size: 15px;
 			}
@@ -787,9 +807,9 @@
 			<div class="left">
 				<pre>
 						<code><mark>&lt;form&gt;</mark></code>
-						<code>	&lt;label for="firstname" &gt;First name:&lt;br&gt;</code>
+						<code>	&lt;label for="firstname"&gt;First name:&lt;/label&gt;&lt;br&gt;</code>
 						<code>	&lt;input type="text" id="firstname" name="firstname"&gt;</code>
-						<code>	&lt;label for="lastname" &gt;Last name:&lt;br&gt;</code>
+						<code>	&lt;label for="lastname"&gt;Last name:&lt;/label&gt;&lt;br&gt;</code>
 						<code>	&lt;input type="text" id="lastname" name="lastname"&gt;</code>
 						<code>	&lt;input type="radio" name="gender" value="male" checked&gt; Male</code>
   					<code>	&lt;input type="radio" name="gender" value="female"&gt; Female</code>
