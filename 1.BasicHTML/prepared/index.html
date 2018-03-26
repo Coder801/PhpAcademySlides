@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Основы HTML</title>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+	<style>
+		.hljs-doctag,
+		.hljs-keyword,
+		.hljs-formula {
+			color: rgb(198, 120, 221) !important;
+		}
+		pre mark {
+			color: #fff !important;
+		}
+		.mark {
+			background-color: #282c34 !important;
+			padding: 1px 5px;
+			color: #fff;
+			border-radius: 4px;
+		}
+		.hljs-tag {
+			color: #e06c75 !important;
+		}
+		.slide code.hljs {
+			background-color: #282c34;
+			border: none !important;
+			margin-bottom: -1px !important;
+			margin-top: 0 !important;
+			padding-bottom: 0 !important;
+			padding-top: 0 !important;
+		}
+		.slide .left {
+			margin-right: 60px;
+		}
+		.slide .left pre code {
+			width: auto;
+		}
+	</style>
 </head>
+
 <body class="shower list">
 
 	<style media="screen">
 		.text-center {
 			text-align: center;
 		}
+
 		.shower.full .slide .next {
 			opacity: 0;
 			-webkit-transform: translateY(-50px);
@@ -22,6 +60,7 @@
 			-o-transition: .6s ease;
 			transition: .6s ease;
 		}
+
 		.shower.full .slide .next.active {
 			opacity: 1;
 			-webkit-transform: translateY(0);
@@ -29,9 +68,15 @@
 			transform: translateY(0);
 		}
 
+		.slide mark {
+			z-index: 1 !important;
+			background: none !important;
+		}
+
 		.slide mark.important {
-		    background: #c00;
-		    color: #fff;
+			background: #c00;
+			color: #fff;
+			z-index: 1;
 		}
 	</style>
 
@@ -47,20 +92,23 @@
 		</figure>
 		<style>
 			#cover h2 {
-				color:#FFF;
-				text-align:center;
-				font-size:70px;
+				color: #FFF;
+				text-align: center;
+				font-size: 70px;
 			}
+
 			#cover p {
-				margin:10px 0 0;
-				text-align:center;
-				color:#FFF;
-				font-style:italic;
-				font-size:20px;
+				margin: 10px 0 0;
+				text-align: center;
+				color: #FFF;
+				font-style: italic;
+				font-size: 20px;
 			}
+
 			#cover p a {
-				color:#FFF;
+				color: #FFF;
 			}
+
 			#cover .cover {
 				width: 100%;
 			}
@@ -77,6 +125,7 @@
 			#slide1 .img {
 				height: 300px;
 			}
+
 			#slide1 h3 {
 				font-size: 30px;
 			}
@@ -89,16 +138,18 @@
 			<img class="img" src="pictures/83864644_45095.jpg" alt="">
 		</center>
 		<style>
-		#slide2 {
-			padding-top: 50px;
-		}
-		 #slide2 h1 {
-		 	font-size: 50px;
-			margin-bottom: 20px;
-		 }
-		 #slide2 img {
-		 	max-width: 100%;
-		 }
+			#slide2 {
+				padding-top: 50px;
+			}
+
+			#slide2 h1 {
+				font-size: 50px;
+				margin-bottom: 20px;
+			}
+
+			#slide2 img {
+				max-width: 100%;
+			}
 		</style>
 	</section>
 
@@ -106,28 +157,35 @@
 		<p class="text-center">Язык HTML был разработан британским учёным Тимом Бернерсом-Ли приблизительно в 1986—1991 годах в стенах CERN в Женеве в Швейцарии</p>
 		<img src="pictures/Tim-Berners-Lee-1.jpg" alt="">
 		<ul>
-			<li>HTML 0.9;</li>
-			<li>HTML 2.0, одобренный как стандарт 22 сентября 1995 года;</li>
-			<li>HTML 3.0 — март 1995 года;</li>
-			<li>HTML 4.0 — 18 декабря 1997 года;</li>
-			<li>HTML 4.01 24 декабря 1999 года;</li>
-			<li>HTML5 — 20 ноября 2007 года;</li>
-			<li>HTML 5.1 начал разрабатываться 17 декабря 2012 года.</li>
+			<li><strong>HTML 0.9</strong>;</li>
+			<li><strong>HTML 2.0</strong> - как стандарт 22 сентября 1995 года;</li>
+			<li><strong>HTML 3.0</strong> — март 1995 года;</li>
+			<li><strong>HTML 4.0</strong> — 18 декабря 1997 года;</li>
+			<li><strong>HTML 4.01</strong> - 24 декабря 1999 года;</li>
+			<li><strong>HTML5</strong> — 20 ноября 2007 года;</li>
+			<li><strong>HTML 5.1</strong> - 17 декабря 2012, по 3 Октября 2017</li>
+			<li><strong>HTML 5.2</strong> - 14 Декабря 2017</li>
+			<li><strong>HTML 5.3</strong> - В разработке</li>
 		</ul>
 		<style>
-		 #slide3 p {
-		 	font-size: 24px;
-		 }
-		 #slide3 img {
-		 	max-width: 40%;
-			float: left;
-			margin-right: 7%;
-		 }
-		 #slide3 ul {
-		 	margin-top: -10px;
-		 	overflow: hidden;
-		 	font-size: 17px;
-		 }
+			#slide3 p {
+				font-size: 24px;
+			}
+
+			#slide3 img {
+				max-width: 47.5%;
+				float: left;
+				margin-right: 5%;
+			}
+
+			#slide3 ul {
+				margin-top: -10px;
+				overflow: hidden;
+				font-size: 17px;
+			}
+			#slide3 ul li {
+				border-bottom: 1px solid gray;
+			}
 		</style>
 	</section>
 
@@ -137,19 +195,22 @@
 		</center>
 		<h3 class="text-center">World Wide Web Consortium <strong>W3C</strong> <br><small>(Консорциум Всемирной паутины)</small></h3>
 		<style>
-		 #slide4 {
-		 	padding: 0;
-		 }
-		 #slide4 img {
-		 	max-width: 40%;
-			margin-top: 10%;
-		 }
-		 #slide4 h3 {
-		 	font-size: 40px;
-		 }
-		 #slide4 small {
-		 	font-size: 30px;
-		 }
+			#slide4 {
+				padding: 0;
+			}
+
+			#slide4 img {
+				max-width: 40%;
+				margin-top: 10%;
+			}
+
+			#slide4 h3 {
+				font-size: 40px;
+			}
+
+			#slide4 small {
+				font-size: 30px;
+			}
 		</style>
 	</section>
 
@@ -169,13 +230,16 @@
 				top: 12px;
 				margin-right: 30px;
 			}
+
 			#slide5 ul {
 				list-style: none;
 			}
+
 			#slide5 li {
 				font-size: 36px;
 				color: #676767;
 			}
+
 			#slide5 li::before {
 				opacity: 0;
 			}
@@ -194,11 +258,13 @@
 		</ul>
 		<style>
 			#slide6 ul {
-				margin-top: -20px;
+				margin-top: 0px;
 			}
+
 			#slide6 li {
-				font-size: 40px;
+				font-size: 37px;
 			}
+
 			#slide6 li a {
 				background: none;
 			}
@@ -207,14 +273,14 @@
 
 	<section class="slide" id="slide7">
 		<h2>Пример простой страницы</h2>
-		<pre class="next">
+		<pre class="html">
 			<code>&lt;!DOCTYPE html&gt;</code>
 			<code>&lt;html lang="en"&gt;</code>
 			<code>&lt;head&gt;</code>
 			<code>    &lt;title&gt;HTML First page&lt;/title&gt;</code>
 			<code>&lt;/head&gt;</code>
 			<code>&lt;body&gt;</code>
-			<code class="mark">	&lt;h1&gt;Hello world!&lt;h1&gt; </code>
+			<code>	&lt;h1&gt;Hello world!&lt;h1&gt; </code>
 			<code>&lt;/body&gt;</code>
 			<code>&lt;/html&gt;</code>
 		</pre>
@@ -227,7 +293,7 @@
 
 	<section class="slide" id="slide8">
 		<h2>Структура HTML документа</h2>
-		<pre class="next">
+		<pre>
 			<code><mark>&lt;!DOCTYPE html&gt;</mark> <span class="comment">&lt;!-- Декларация --&gt;</span></code>
 			<code><mark>&lt;html lang="en"&gt;</mark> <span class="comment">&lt;!-- Начало HTML документа --&gt;</span></code>
 			<code><mark>&lt;head&gt;</mark> <span class="comment">&lt;!--Служебная информация--&gt;</span></code>
@@ -249,19 +315,19 @@
 		<h3>DOCTYPE - указывает, в соответствии с каким стандартом HTML написана ваша Web-страница.</h3>
 		<table>
 			<tr>
-				<td>!DOCTYPE html</td>
+				<td>&lt;!DOCTYPE html&gt;</td>
 				<td>Для всех документов.</td>
 			</tr>
 			<tr>
-				<td>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"<br>"http://www.w3.org/TR/html4/strict.dtd"></td>
+				<td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"<br>"http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
 				<td>Строгий синтаксис HTML</td>
 			</tr>
 			<tr>
-				<td>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" <br>"http://www.w3.org/TR/html4/loose.dtd"</td>
+				<td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" <br>"http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
 				<td>Переходный синтаксис HTML.</td>
 			</tr>
 			<tr>
-				<td>!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" <br>"http://www.w3.org/TR/html4/frameset.dtd"</td>
+				<td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" <br>"http://www.w3.org/TR/html4/frameset.dtd"&gt;</td>
 				<td>В HTML-документе применяются фреймы.</td>
 			</tr>
 		</table>
@@ -270,9 +336,11 @@
 				line-height: 1.2;
 				margin-bottom: 30px;
 			}
+
 			#slide8_1 table {
 				font-size: 17px;
 			}
+
 			#slide8_1 table td {
 				padding-top: 15px;
 				padding-bottom: 15px;
@@ -302,7 +370,7 @@
 	</section>
 
 	<section class="slide" id="slide10">
-		<h2>Структура HTML документа</h2>
+		<h2>Структура HTML документа (Body)</h2>
 		<pre>
 			<code>&lt;!DOCTYPE html&gt;</code>
 			<code>&lt;html lang="en"&gt;</code>
@@ -311,12 +379,14 @@
 			<code>&lt;/head&gt;</code>
 			<code><mark>&lt;body&gt;</mark> <span class="comment">&lt;!-- Тело документа --&gt;</span></code>
 			<code class="mark">	<mark>&lt;h1&gt;Hello world!&lt;h1&gt;</mark> <span class="comment">&lt;!-- Тег заголовка --&gt;</span></code>
+			<code class="mark">	<mark>&lt;p&gt;Lorem ipsum dolor sit amet!&lt;p&gt;</mark> <span class="comment">&lt;!-- Тег параграфа --&gt;</span></code>
+			<code class="mark">	<mark>&lt;p&gt;Lorem ipsum dolor sit &lt;a href="#"&gt;amet&lt;/a&gt;!&lt;p&gt;</mark><span class="comment">&lt;!-- Тег параграфа с ссылкой --&gt;</span></code>
 			<code>&lt;/body&gt;</code>
 			<code>&lt;/html&gt;</code>
 		</pre>
 		<style>
 			#slide10 code {
-				font-size: 20px;
+				font-size: 18px;
 			}
 		</style>
 	</section>
@@ -375,6 +445,7 @@
 				color: #333;
 				margin: 0px 60px;
 			}
+
 			#slide13 li h1 {
 				font-size: 30px;
 				font-weight: bold;
@@ -415,26 +486,27 @@
 
 	<section class="slide" id="slide14">
 		<h2>Параграф, Форматирование текста</h2>
-		<p style="font-size: 30px" class="next">Тег <strong>&lt;p&gt;</strong> - определяет параграф</p>
-		<h3 class="next">Форматирование текста</h3>
+		<p style="font-size: 30px">Тег <strong>&lt;p&gt;</strong> - определяет параграф</p>
+		<h3>Форматирование текста</h3>
 		<ul>
-			<li class="next">
-				<p>&lt;strong&gt; <mark><strong>Выделеный текст</strong></mark> &lt;/strong&gt;</p>
+			<li>
+				<p>&lt;strong&gt; <strong>Выделеный текст</strong>&lt;/strong&gt;</p>
 			</li>
-			<li class="next">
-				<p>&lt;em&gt; <mark><em>Курсив</em></mark> &lt;/em&gt;</p>
+			<li>
+				<p>&lt;em&gt; <em>Курсив</em> &lt;/em&gt;</p>
 			</li>
-			<li class="next">
-				<p>&lt;ins&gt; <mark><ins>Подчеркнет</ins></mark> &lt;/ins&gt; или &lt;strike&gt;<mark><strike>перечернет</strike></mark>&lt;/strike&gt; текст</p>
+			<li>
+				<p>&lt;ins&gt; <ins>Подчеркнет</ins> &lt;/ins&gt; или &lt;strike&gt;<strike>перечернет</strike>&lt;/strike&gt; текст</p>
 			</li>
-			<li class="next">
-				<p>&lt;sub&gt; <mark><sub>Нижний</sub></mark> &lt;/sub&gt; или &lt;sup&gt; <mark><sup>верхний</sup></mark> &lt;/sup&gt; индекс</p>
+			<li>
+				<p>&lt;sub&gt; <sub>Нижний</sub> &lt;/sub&gt; или &lt;sup&gt; <sup>верхний</sup> &lt;/sup&gt; индекс</p>
 			</li>
 		</ul>
 		<style>
 			#slide14 ul {
 				margin-top: 0;
 			}
+
 			#slide14 ul p {
 				display: inline-block;
 				margin: 0 50px;
@@ -469,7 +541,7 @@
 			<code>    &lt;title&gt;Picture&lt;/title&gt;</mark></code>
 			<code>&lt;/head&gt;</code>
 			<code>&lt;body&gt;</code>
-			<code class="mark">	<mark>&lt;img src="img/some-image.jpg" alt=""/&gt;</mark> <span class="comment">&lt;!-- Изображение --&gt;</span></code>
+			<code class="mark">	<mark>&lt;img src="img/image.jpg" alt="Smiley face"/&gt;</mark> <span class="comment">&lt;!-- Изображение --&gt;</span></code>
 			<code>&lt;/body&gt;</code>
 			<code>&lt;/html&gt;</code>
 		</pre>
@@ -482,6 +554,7 @@
 
 	<section class="slide" id="slide17">
 		<h2>Списки</h2>
+		<p>Тег <mark>&lt;ul&gt;</mark> устанавливает маркированный список</p>
 		<div class="box">
 			<div class="left">
 				<pre>
@@ -495,8 +568,8 @@
 			<div class="right">
 				<ul>
 					<li>Coffee</li>
-				  <li>Tea</li>
-				  <li>Milk</li>
+					<li>Tea</li>
+					<li>Milk</li>
 				</ul>
 			</div>
 		</div>
@@ -505,11 +578,13 @@
 			#slide17 code {
 				font-size: 20px;
 			}
+
 			#slide17 .box {
 				display: grid;
 				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
+
 			#slide17 .right {
 				padding-top: 26px;
 			}
@@ -531,8 +606,8 @@
 			<div class="right">
 				<ol>
 					<li>Coffee</li>
-				  <li>Tea</li>
-				  <li>Milk</li>
+					<li>Tea</li>
+					<li>Milk</li>
 				</ol>
 			</div>
 		</div>
@@ -541,11 +616,13 @@
 			#slide18 code {
 				font-size: 20px;
 			}
+
 			#slide18 .box {
 				display: grid;
 				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
+
 			#slide18 .right {
 				padding-top: 26px;
 			}
@@ -567,10 +644,10 @@
 			</div>
 			<div class="right">
 				<dl>
-				  <dt>Coffee</dt>
-				  <dd>Black hot drink</dd>
-				  <dt>Milk</dt>
-				  <dd>White cold drink</dd>
+					<dt>Coffee</dt>
+					<dd>Black hot drink</dd>
+					<dt>Milk</dt>
+					<dd>White cold drink</dd>
 				</dl>
 			</div>
 		</div>
@@ -578,14 +655,17 @@
 			#slide19 code {
 				font-size: 20px;
 			}
+
 			#slide19 .box {
 				display: grid;
 				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
+
 			#slide19 .right {
 				padding-top: 26px;
 			}
+
 			#slide19 dd {
 				margin-left: 30px;
 			}
@@ -616,14 +696,17 @@
 			#slide20 code {
 				font-size: 15px;
 			}
+
 			#slide20 .box {
 				display: grid;
 				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
+
 			#slide20 .left {
 				overflow: hidden;
 			}
+
 			#slide20 .right {
 				padding-left: 30px;
 			}
@@ -676,18 +759,22 @@
 			#slide21 code {
 				font-size: 15px;
 			}
+
 			#slide21 table {
 				font-size: 18px;
 			}
+
 			#slide21 .box {
 				display: grid;
 				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
+
 			#slide21 .right {
 				padding-left: 20px;
 				overflow: hidden;
 			}
+
 			#slide21 .right {
 				padding-left: 30px;
 			}
@@ -698,7 +785,7 @@
 		<h2>Формы</h2>
 		<div class="box">
 			<div class="left">
-					<pre>
+				<pre>
 						<code><mark>&lt;form&gt;</mark></code>
 						<code>	&lt;label for="firstname" &gt;First name:&lt;br&gt;</code>
 						<code>	&lt;input type="text" id="firstname" name="firstname"&gt;</code>
@@ -719,19 +806,19 @@
 			<div class="right">
 				<form>
 					<fieldset>
-					  <label for="firstname">First name:</label><br>
-					  <input type="text" name="firstname" id="firstname">
+						<label for="firstname">First name:</label><br>
+						<input type="text" name="firstname" id="firstname">
 						<label for="lastname">Last name:</label><br>
-					  <input type="text" name="lastname" id="lastname">
-					  <input type="radio" name="gender" value="male" checked> Male<br>
-					  <input type="radio" name="gender" value="female"> Female<br>
-					  <input type="radio" name="gender" value="other"> Other
+						<input type="text" name="lastname" id="lastname">
+						<input type="radio" name="gender" value="male" checked> Male<br>
+						<input type="radio" name="gender" value="female"> Female<br>
+						<input type="radio" name="gender" value="other"> Other
 						<select class="" name="">
 							<option value="option">Option 1</option>
 							<option value="option">Option 2</option>
 							<option value="option">Option 3</option>
 						</select>
-	  				<input type="submit" value="Submit">
+						<input type="submit" value="Submit">
 					</fieldset>
 				</form>
 			</div>
@@ -740,33 +827,42 @@
 			#slide22 code {
 				font-size: 12px;
 			}
+
 			#slide22 .box {
 				display: grid;
 				height: 100%;
 				grid-template-columns: 1fr 1fr
 			}
+
 			#slide22 .right {
 				padding-left: 20px;
 				overflow: hidden;
 			}
+
 			#slide22 .right {
 				padding-left: 30px;
 			}
+
 			#slide22 form {
 				font-size: 15px;
 			}
-			#slide22 form input, #slide19 form select {
+
+			#slide22 form input,
+			#slide19 form select {
 				display: block;
 			}
+
 			#slide22 form select {
 				margin-bottom: 30px;
 			}
+
 			#slide22 form fieldset {
 				border: 1px solid #ccc;
 				padding: 20px;
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
 			}
+
 			#slide22 form input[type="radio"] {
 				display: inline-block;
 			}
@@ -775,15 +871,24 @@
 
 	<section class="slide" id="slide23">
 		<h2>Семантика</h2>
-		<table>
-			<tr>
-				<td><code>&lt;header&gt;</code></td>
-				<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, culpa ut alias blanditiis laboriosam vel. Distinctio dolorum illum culpa, ipsa ducimus officia earum natus amet odio fuga quisquam, iste provident!</td>
-			</tr>
-		</table>
+		<p>Семантические элементы - элементы которые четко описывают свое предназначение, и понятные как Веб-приложению так и разработчику</p>
+		<ul class="list">
+			<li>article</li>
+			<li>aside</li>
+			<li>details</li>
+			<li>figcaption</li>
+			<li>figure</li>
+			<li>footer</li>
+			<li>header</li>
+			<li>main</li>
+			<li>mark</li>
+			<li>nav</li>
+			<li>section</li>
+			<li>summary</li>
+			<li>time</li>
+		</ul>
 		<style>
-			#slide23 {
-			}
+			#slide23 {}
 		</style>
 	</section>
 
@@ -823,6 +928,11 @@
 
 	<script src="shower/shower.min.js"></script>
 	<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
 
 </body>
+
 </html>
