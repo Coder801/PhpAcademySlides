@@ -624,6 +624,10 @@
 		</div>
 		</div>
 		<style>
+			#slide17 .right {
+				padding: 10px;
+				border: 1px solid;
+			}
 			#slide17 code {
 				font-size: 20px;
 			}
@@ -663,6 +667,10 @@
 		</div>
 		</div>
 		<style>
+			#slide18 .right {
+				padding: 10px;
+				border: 1px solid;
+			}
 			#slide18 code {
 				font-size: 20px;
 			}
@@ -703,6 +711,10 @@
 			</div>
 		</div>
 		<style>
+			#slide19 .right {
+				padding: 10px;
+				border: 1px solid;
+			}
 			#slide19 code {
 				font-size: 20px;
 			}
@@ -745,6 +757,10 @@
 			</div>
 		</div>
 		<style>
+			#slide20 .right {
+				padding: 10px;
+				border: 1px solid;
+			}
 			#slide20 {
 			    padding-top: 100px;
 			}
@@ -760,11 +776,40 @@
 				display: grid;
 				grid-template-columns: 1fr 1fr
 			}
+		</style>
+	</section>
 
-			#slide20 .left {
+	<section class="slide" id="br-hr">
+		<h2>Переносы и разделители</h2>
+		<p>Теги <mark>br</mark> и <mark>hr</mark> используются для созданий переносов и горизонтального разделения</p>
+		<div class="box">
+			<div class="left">
+				<pre class="html">
+					<code>Lorem ipsum dolor sit amet, &lt;br&gt; </code>
+					<code>consectetur adipisicing elit.</code>
+					<code>Commodi hic in impedit sequi. &lt;hr&gt; <br>doloremque quisquam delectus.</code>
+				</pre>
+			</div>
+			<div class="right">
+				<p>Lorem ipsum dolor sit amet, <br>
+				consectetur adipisicing elit.<br>
+				Commodi hic in impedit sequi.</p> <hr> <p>doloremque quisquam delectus.</p>
+			</div>
+		</div>
+		<style>
+			#br-hr .box {
+				display: grid;
+				grid-template-columns: 1fr 1fr
 			}
-
-			#slide20 .right {
+			#br-hr code {
+				font-size: 15px;
+			}
+			#br-hr .right {
+				padding: 10px;
+				border: 1px solid;
+			}
+			#br-hr p {
+				font-size: 18px;
 			}
 		</style>
 	</section>
@@ -813,6 +858,10 @@
 			</div>
 		</div>
 		<style>
+			#slide21 .right {
+				padding: 10px;
+				border: 1px solid;
+			}
 			#slide21 p {
 				font-size: 18px;
 			}
@@ -917,14 +966,36 @@
 			}
 
 			#slide22 form fieldset {
-				border: 1px solid #ccc;
-				padding: 20px;
+				border: 1px solid black;
+				padding: 40px;
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
 			}
 
 			#slide22 form input[type="radio"] {
 				display: inline-block;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="div-span">
+		<h2>Универсальные элементы</h2>
+		<p></p>
+		<style>
+			#div-span img {
+				max-width: 80%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="divatoz">
+		<h2>Диватоз</h2>
+		<center>
+			<img src="./pictures/semantics.png" alt="">
+		</center>
+		<style>
+			#divatoz img {
+				max-width: 80%;
 			}
 		</style>
 	</section>
