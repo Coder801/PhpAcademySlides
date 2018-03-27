@@ -624,8 +624,8 @@
 		</div>
 		</div>
 		<style>
-			#slide17 .right {
-				padding: 10px;
+			#slide17 .right ul {
+				padding: 10px 10px 10px 50px;
 				border: 1px solid;
 			}
 			#slide17 code {
@@ -667,8 +667,8 @@
 		</div>
 		</div>
 		<style>
-			#slide18 .right {
-				padding: 10px;
+			#slide18 .right ol {
+				padding: 10px 10px 10px 50px;
 				border: 1px solid;
 			}
 			#slide18 code {
@@ -711,8 +711,8 @@
 			</div>
 		</div>
 		<style>
-			#slide19 .right {
-				padding: 10px;
+			#slide19 .right dl {
+				padding: 10px 10px 10px 50px;
 				border: 1px solid;
 			}
 			#slide19 code {
@@ -751,7 +751,7 @@
 				</pre>
 			</div>
 			<div class="right">
-				<iframe width="450" height="290" src="http://localhost:8080/#slide20">
+				<iframe width="350" height="220" src="http://localhost:8080/#slide20">
 				  <p>Browser does not support iframes.</p>
 				</iframe>
 			</div>
@@ -785,9 +785,9 @@
 		<div class="box">
 			<div class="left">
 				<pre class="html">
-					<code>Lorem ipsum dolor sit amet, &lt;br&gt; </code>
-					<code>consectetur adipisicing elit.</code>
-					<code>Commodi hic in impedit sequi. &lt;hr&gt; <br>doloremque quisquam delectus.</code>
+					<code>&lt;p&gt;Lorem ipsum dolor sit amet, &lt;br&gt; </code>
+					<code>consectetur adipisicing elit.&lt;/p&gt;</code>
+					<code>&lt;p&gt;Commodi hic in impedit sequi.<br>&lt;hr&gt;<br>doloremque quisquam delectus.&lt;/p&gt;</code>
 				</pre>
 			</div>
 			<div class="right">
@@ -833,33 +833,35 @@
 				</pre>
 			</div>
 			<div class="right">
-				<table>
-					<tr>
-						<th><mark class="important">Locavore</mark></th>
-						<th>Umami</th>
-					</tr>
-					<tr>
-						<td><mark class="important">Fingerstache</mark></td>
-						<td>Kale</td>
-					</tr>
-					<tr>
-						<td>Sriracha</td>
-						<td>Gluten-free</td>
-					</tr>
-					<tr>
-						<td>Thundercats</td>
-						<td>Jean</td>
-					</tr>
-					<tr>
-						<td>Terry</td>
-						<td>Richardson</td>
-					</tr>
-				</table>
+				<div class="inner">
+					<table>
+						<tr>
+							<th><mark class="important">Locavore</mark></th>
+							<th>Umami</th>
+						</tr>
+						<tr>
+							<td><mark class="important">Fingerstache</mark></td>
+							<td>Kale</td>
+						</tr>
+						<tr>
+							<td>Sriracha</td>
+							<td>Gluten-free</td>
+						</tr>
+						<tr>
+							<td>Thundercats</td>
+							<td>Jean</td>
+						</tr>
+						<tr>
+							<td>Terry</td>
+							<td>Richardson</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 		<style>
-			#slide21 .right {
-				padding: 10px;
+			#slide21 .right .inner {
+				padding: 20px;
 				border: 1px solid;
 			}
 			#slide21 p {
@@ -871,6 +873,16 @@
 
 			#slide21 table {
 				font-size: 18px;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+				width: 100% !important;
+				padding: 0 !important;
+			}
+			#slide21 table th {
+				padding: 0;
+			}
+			#slide21 table td {
+				padding: 0;
 			}
 
 			#slide21 .box {
@@ -979,11 +991,65 @@
 	</section>
 
 	<section class="slide" id="div-span">
-		<h2>Универсальные элементы</h2>
-		<p></p>
+		<h2>Группы элементов</h2>
+		<p>Когда дело доходит до отображения тегов, браузер распознаёт три группы элементов:</p>
+		<div class="box">
+			<div class="left">
+				<pre class="html">
+						<code>&lt;div&gt; Element &lt;/div&gt; &lt;!-- Block element --&gt;</code>
+						<code>&lt;p&gt; Element &lt;/p&gt; &lt;!-- Block element --&gt;</code>
+						<code>&lt;article&gt; Element &lt;/article&gt; &lt;!-- Block element --&gt;</code>
+						<code>&nbsp;</code>
+						<code>&lt;span&gt; Element &lt;/span&gt; &lt;!-- Inline element --&gt;</code>
+						<code>&lt;em&gt; Element &lt;/em&gt; &lt;!-- Inline element --&gt;</code>
+						<code>&lt;strong&gt; Element &lt;/span&gt; &lt;!-- Inline element --&gt;</code>
+						<code>&nbsp;</code>
+						<code>&lt;/input&gt; &lt;!-- Inline-block element --&gt;</code>
+						<code>&lt;/textarea&gt; &lt;!-- Inline-block element --&gt;</code>
+					</pre>
+			</div>
+			<div class="right">
+				<div class="inner">
+					<div>Block element</div>
+					<p>Block element</p>
+					<article>Block element</article>
+					<span>Inline element</span>
+					<em>Inline element </em>
+					<strong>Inline element</strong>
+					<br>
+					<input type="text">
+					<textarea name="" id="" cols="30" rows="10"></textarea>
+				</div>
+			</div>
+		</div>
 		<style>
-			#div-span img {
-				max-width: 80%;
+			#div-span p {
+				font-size: 19px;
+				margin-bottom: 30px;
+			}
+			#div-span code {
+				font-size: 11.5px;
+			}
+			#div-span .box {
+				display: grid;
+				grid-template-columns: 1fr 1fr
+			}
+			#div-span .box form {
+				font-size: 18px;
+			}
+			#div-span .right .inner {
+				border: 1px solid;
+				padding: 15px;
+			}
+			#div-span .right .inner > * {
+				font-size: 15px;
+				line-height: 18px;
+				margin: 1px;
+				padding: 1px;
+				background-color: #cfcfcf;
+			}
+			#div-span .right .inner textarea {
+				height: 80px;
 			}
 		</style>
 	</section>
