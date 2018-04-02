@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Знакомство с Git</h1>
+		<p>Dmitriy Onishchenko</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2 class="shout shrink">Работа с Git</h2>
+		<figure>
+			<img class="cover" src="pictures/cover.png" alt="">
+		</figure>
+		<style>
+			#cover h2 {
+				color: #FFF;
+				text-align: center;
+				font-size: 70px;
+			}
+
+			#cover p {
+				margin: 10px 0 0;
+				text-align: center;
+				color: #FFF;
+				font-style: italic;
+				font-size: 20px;
+			}
+
+			#cover p a {
+				color: #FFF;
+			}
+
+			#cover .cover {
+				width: 100%;
+			}
+			img {
+				max-width: 100%;
+			}
+			.grid-double {
+				display: grid;
+				grid-template-areas: "left right";
+			  grid-template-rows: 1fr;
+				grid-gap: 40px;
+			  grid-template-columns: 1fr 1fr;
+			}
+			.grid-double > .left {
+				grid-area: left;
+			}
+			.grid-double > .right {
+				grid-area: right;
+			}
+			.grid-double > .right table {
+				padding: 0;
+				margin: 0;
+				width: 100%;
+			}
+			.grid-double > .right table td {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+			}
+
+			span.code {
+				display: inline-block;
+				padding: 0px 10px;
+				background-color: #343434;
+				color: #fff;
+				text-indent: 0;
+				line-height: 35px;
+				font-weight: 100;
+				font-family: monospace;
+				border-radius: 5px;
+			}
+
+			small {
+				color: #999;
+				font-size: 80%;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>План урока</h2>
+		<ul style="font-size: 28px;">
+			<li>Системы контроля версий</li>
+			<li>Установка и настройка Git</li>
+			<li>Git Workflow and Git Lifecycle</li>
+			<li>Создание и клонирование репозитория</li>
+			<li>Работа с репозиторием</li>
+			<li>Базовые команды</li>
+			<li>Инструменты Git</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Зачем нужны Системы контроля версий?</h2>
+		<p style="font-size: 28px; line-height: 44px;"><strong>СКВ</strong> (Revision Control System) - система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов.</p>
+		<p style="font-size: 28px; line-height: 44px;">Практически все СКВ представляют собой некое хранилище, в котором хранятся все версии файлов, с которыми мы работаем.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Системы контроля версий</h2>
+		<p style="font-size: 34px;">Всего разделяют три основных подхода СКР:</p>
+		<ol style="font-size: 30px;">
+			<li>Локальная</li>
+			<li>Централизованная Система Контроля Версий (ЦСКР)</li>
+			<li>Распределенная Система Контроля Версий (ЦСКР)</li>
+		</ol>
+	</section>
+
+	<section class="slide git-lrcv">
+		<h2>Локальная модель</h2>
+		<div class="grid-double">
+			<div class="left">
+				<img src="./pictures/18333fig0101-tn.png" alt="">
+			</div>
+			<div class="right">
+				<p>Все данные храняться только на локальном компьютере автора. <br>Часто могут иметь вид архива <br>(с датой изменений).</p>
+				<p>Так же могут использоваться инструменты (Например утилита <strong>RCS<strong>)</p>
+			</div>
+		</div>
+		<style>
+			.git-lrcv p {
+				font-size: 23px;
+				line-height: 40px;
+			}
+		</style>
+	</section>
+
+	<section class="slide git-lical-crcv">
+		<h2>Централизированная СКР</h2>
+		<div class="grid-double">
+			<div class="left">
+				<img src="./pictures/18333fig0102-tn.png" alt="">
+			</div>
+			<div class="right">
+				 <p>Данные хранятся на сервере, под версионным контролем, и ряд клиентов, которые получают копии файлов из него. </p>
+				 <p>Примеры таких систем: <br><strong>SVN</strong>, <strong>CVS</strong>, <strong>Subversion</strong> и <strong>Perforce</strong></p>
+			</div>
+		</div>
+		<style>
+			.git-lical-crcv p {
+				font-size: 24px;
+				line-height: 40px;
+			}
+		</style>
+	</section>
+
+	<section class="slide git-lical-rrcv">
+		<h2>Распределенная СКР</h2>
+		<div class="grid-double">
+			<div class="left">
+				<img src="./pictures/18333fig0103-tn.png" alt="">
+			</div>
+			<div class="right">
+				 <p>У каждого разработчика на компьютере есть локальная версия файлов.</p>
+				 <p><strong>РСКР</strong> Может работать без сервера. Все история изменений храниться на каждом компьютере и при необходимости синхронизируются с аналогичным хранилищем на другом компьютере</p>
+				 <p>Примеры таких систем: <strong>Git</strong>, <strong>Mercurial</strong>, <strong>Bazaar</strong> или <strong>Darcs</strong></p>
+			</div>
+		</div>
+		<style>
+			.git-lical-rrcv .grid-double {
+				grid-template-columns: 40% 60%;
+			}
+			.git-lical-rrcv p {
+				font-size: 20px;
+				line-height: 36px;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Что такое Git?</h2>
+		<p><strong>Git</strong> - распределенная система контроля версий</p>
+	</section>
+
+	<section class="slide">
+		<h2>Установка Git</h2>
+		<ul style="font-size: 36px;">
+			<li>Linux: <span class="code">apt-get install git</span></li>
+			<li>MacOS: <span class="code">brew install git</span></li>
+			<li>Windows: <small>Download from <a href="https://gitforwindows.org/">gitforwindows.org</a></small></li>
+		</ul>
+		<p style="font-size: 30px;">После этого в командной строке будет доступна команда <span class="code">git</span></p>
+	</section>
+
+	<section class="slide git-firs-setting">
+		<h2>Первоначальная настройка Git</h2>
+		<p>Для работы с <strong>Git</strong> требуется инициализировать вашего пользователя</p>
+		<ul>
+			<li><span class="code">git config --global user.name "Dmitriy Onishchenko"</span></li>
+			<li><span class="code">git config --global user.email donischenko801@gmail.com</span></li>
+		</ul>
+		<p>При использовании флага <span class="code">--global</span> настройки применятся для одного пользователя и вам не нужно будет их заново указывать</p>
+		<p>Для проверки настроек выполните команду <span class="code">git config --list</span></p>
+		<style>
+			.git-firs-setting ul {
+				font-size: 24px;
+			}
+		</style>
+	</section>
+
+	<section class="slide git-flow">
+		<h2>Рабочий процесс Git</h2>
+		<center>
+			<img style="width: 70%" src="./pictures/git_workflow.png" alt="">
+		</center>
+	</section>
+
+	<section class="slide git-lifecycle">
+		<h2>Git Lifecycle</h2>
+		<div class="grid-double">
+			<div class="left">
+				<img src="./pictures/life_cycle.png" alt="">
+			</div>
+			<div class="right">
+				<table>
+					<tr>
+						<td>Создание локальной копии удалённого репозитория (Clone)</td>
+					</tr>
+					<tr>
+						<td>Изменение локальной копии проекта (add/rm/mv)</td>
+					</tr>
+					<tr>
+						<td>Обновление локальной копии при необходимости (Pull)</td>
+					</tr>
+					<tr>
+						<td>Подтверждение изменений в локальном репозитории (Commit)</td>
+					</tr>
+					<tr>
+						<td>Добавление изменение из локального репозитория в центральный (Push)</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<style>
+			.git-lifecycle .right table {
+				font-size: 18px;
+			}
+		</style>
+	</section>
+
+	<section class="slide git-create-repo">
+		<h2>Создание Git репозитория</h2>
+		<ol>
+			<li>Создаем удаленный репозиторий на <strong>github.com</strong></li>
+			<li>Инициализируем <strong>Git</strong> проект в папке при помощи команды <span class="code">git init</span></li>
+			<li>Добавляем удаленный репозиторий командой <span class="code">git remote add origin "URL"</li>
+			<li>Добавляем файлы в наш репозиторий</li>
+			<li>По завершению разработки помечаем файлы как отслеживаемые командой <span class="code">git add</span></li>
+			<li>Фиксируем изменения при помощи команды <span class="code">git commit</span></li>
+			<li>Заливаем файлы на <strong>remote</strong> сервер при помощи <span class="code">git push</span></li>
+		</ol>
+		<style>
+			.git-create-repo ol {
+				font-size: 21px;
+			}
+		</style>
+	</section>
+
+	<section class="slide git-clone-repo">
+		<h2>Клонирование репозитория</h2>
+		<p>Операция <strong>clone</strong> создаёт экземпляр удалённого репозитория.</p>
+		<ol>
+			<li>Переходим в нужную папку <span class="code">cd ./ProjectFolder</span></li>
+			<li>Клонируем репозиторий командой <span class="code">git clone "URL"</span></li>
+		</ol>
+		<p>Репозиторий склонирован и готов к работе</p>
+		<style>
+			.git-clone-repo ol, .git-clone-repo p {
+				font-size: 30px;
+			}
+		</style>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
+</body>
+</html>
