@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+</head>
+<body class="shower list">
+
+
+		<style>
+			.slide {
+				padding-top: 70px;
+			}
+			#cover h2 {
+				margin:30px 0 0;
+				color:#FFF;
+				text-align:center;
+				font-size:70px;
+				}
+			#cover p {
+				margin:10px 0 0;
+				text-align:center;
+				color:#FFF;
+				font-style:italic;
+				font-size:20px;
+				}
+				#cover p a {
+					color:#FFF;
+					}
+				ul.list {
+						margin-left: 21px;
+				}
+				ul.small-list {
+					margin-left: 50px;
+					font-size: .85em;
+					line-height: 2.3rem;
+					margin-top: -20px;
+					margin-bottom: 10px;
+				}
+				ul.small-list li {
+					margin-bottom: 10px;
+				}
+				h2 > small {
+					display: inline-block;
+					margin-left: 20px;
+					font-size: .8em;
+					color: gray;
+				}
+				h3 {
+					font-size: 2rem;
+					font-weight: bold;
+				}
+				p.small {
+					font-size: .8em;
+					line-height: 2.3rem;
+				}
+				figure {
+					text-align: center;
+				}
+				img {
+					max-width: 100%;
+				}
+				.assessment {
+					width: 70% !important;
+					margin: 0 !important;
+				}
+				.assessment th, .assessment td {
+					vertical-align: middle;
+					padding: 0 !important;
+					font-size: 1.4rem !important;
+				}
+				.assessment .assessment-img  {
+					margin-top: 5px;
+					float: right;
+					margin-right: -18px;
+				}
+		</style>
+
+	<header class="caption">
+		<h1>CSS Methodologies</h1>
+		<p>Dmitriy Onishchenko.</p>
+	</header>
+
+	<section class="slide">
+      <blockquote style="margin-top: 170px">
+        <p style="font-size: 2rem; text-align: center">«Писать CSS-код легко. <br>Масшабировать и поддерживать его — нет»</p>
+      </blockquote>
+      <figcaption style="font-size: 1.5rem; text-align: right">Бен Фрейн</figcaption>
+  </section>
+
+  <section class="slide">
+    <h2 class="shout shrink" style="font-size:5rem">Для чего нужны методологии?</h2>
+  </section>
+
+  <section class="slide">
+    <h2>Проблемы CSS</h2>
+    <ul class="list" style="font-size: 2rem; margin-top: 100px">
+      <li>Маштабируемость</li>
+      <li>Колличество кода</li>
+      <li>Поддержка кода</li>
+      <li>Страктура (стилистика)</li>
+    </ul>
+  </section>
+
+  <section class="slide">
+    <h2>Требования к верстке</h2>
+    <ul class="list" style="font-size: 2rem; margin-top: 60px">
+      <li>Изменения кода не должно ломать старый код</li>
+      <li>Разработчик должен понимать свой код</li>
+      <li>Уменьшение повторяющегося кода</li>
+      <li>Команда должна говорить на "одном языке"</li>
+    </ul>
+  </section>
+
+	<section class="slide">
+		<h2>Критерии оценки методологии*</h2>
+		<ul class="list" style="font-size: 1.4rem; margin-top: 60px">
+			<li><strong>Понимаемость кода</strong> - Вернувшись к коду через год должно быть все понятно и не только вам</li>
+			<li><strong>Масштабируемость</strong> - на сколько безболезненно можно создавать новые елементы</li>
+			<li><strong>Колличество кода</strong> - Влияние на оптимизацию, исключение повторения кода</li>
+			<li><strong>Поддержка</strong> - Добаботка Legacy кода</li>
+			<li><strong>Порог вхождения</strong> - Время на изучение методологии, реализация ее, и шаринга в команде</li>
+		</ul>
+		<p style="margin-top: 40px; text-align: right"><small style="font-size: 1rem">*По мнению "редакции"</small></p>
+	</section>
+
+	<section class="slide slide_2">
+		<h2>Основыне подходы к организации CSS</h2>
+		<ul class="list" style="font-size: 1.3rem;color: #555">
+			<li><a href="http://oocss.org/" target="_blank">OOCSS</a> Object-Oriented CSS</li>
+			<li><a href="https://en.bem.info/methodology/" target="_blank">BEM (БЭМ)</a> Block Element Modifier</li>
+			<li><a href="https://operatino.github.io/MCSS/en/" target="_blank">MCSS</a> Multilayer CSS</li>
+			<li><a href="https://amcss.github.io/" target="_blank">AMCSS</a> Attribute Modules for CSS</li>
+			<li><a href="https://smacss.com/" target="_blank">SMACSS</a> Scalable and Modular Architecture for CSS</li>
+			<li><a href="http://rscss.io/index.html" target="_blank">RSCSS</a> Reasonable System for CSS Stylesheet Structure</li>
+			<li><a href="https://acss.io/" target="_blank">Atomic CSS</a></li>
+		</ul>
+		<p style="margin-top: 140px; text-align: right"><small style="font-size: 1rem">*По мнению редакции</small></p>
+		<style>
+			.slide_2 a {
+				display: inline-block;
+				width: 170px;
+				text-indent: 0;
+				background: none;
+				font-size: 1.5rem;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>OOCSS <small>Object-Oriented CSS</small></h2>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p>В этот подход заложены две основные идеи:</p>
+			<ul class="list">
+				<li>Разделение структуры и оформления</li>
+				<li>Разделение контейнера и контента (содержимого)</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>OOCSS <small>Object-Oriented CSS</small></h2>
+		<figure>
+			<img src="https://hsto.org/files/466/3e3/813/4663e38131c24db99aa009b4a55d3235.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>OOCSS <small>Object-Oriented CSS</small></h2>
+		<div class="next">
+			<p>Плюсы:</p>
+			<ul class="small-list">
+				<li>Меньшение количества кода за счет повторного его использования <br>(принцип DRY).</li>
+				<li>Легкость в освоении</li>
+			</ul>
+		</div>
+		<div class="next">
+			<p>Минусы:</p>
+			<ul class="small-list">
+				<li>Достаточно сложная поддержка: при изменении стиля конкретного элемента скорее всего придется менять не только CSS (т.к. большинство классов общие), но и добавлять классы в разметку.</li>
+				<li>Подход предлагает не конкретные правила, а абстрактные рекомендации</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide emo">
+		<h2>OOCSS <small>Object-Oriented CSS</small></h2>
+		<figure>
+			<img class="cover" src="https://progorod58.ru/userfiles/picitem/img-20141116153511-983.jpg" style="width: 100%;" alt="">
+		</figure>
+		<h3>Мнение редакции:</h3><br>
+		<p>Хороший подход если у вас на календаре еще 2007 год. <br>Но эта концепци дала толчок для многих других методологий</p>
+		<style>
+			.emo {
+				background-color: black;
+			}
+			.emo h2, .emo h3 {
+				color: white;
+			}
+			.emo p {
+				color: white;
+			}
+			.emo img {
+				filter: brightness(0.3) blur(1px);
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>OOCSS <small>Object-Oriented CSS</small></h2>
+		<p><strong>Оценка:</strong></p>
+		<table class="assessment">
+			<tr>
+				<th>Понимаемость кода</th>
+				<td>4</td>
+			</tr>
+			<tr>
+				<th>Масштабируемость</th>
+				<td>2</td>
+			</tr>
+			<tr>
+				<th>Колличество кода</th>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th>Поддержка</th>
+				<td>3</td>
+			</tr>
+			<tr>
+				<th>Порог вхождения</th>
+				<td>5</td>
+			</tr>
+			<tr>
+				<th>Итого:</th>
+				<td>3.4</td>
+			</tr>
+		</table>
+	</section>
+
+
+	<!-- ========================================================== -->
+
+
+	<section class="slide">
+		<h2>BEM (БЭМ) <small>Block Element Modifier</small></h2>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p>компонентный подход к веб-разработке. В его основе лежит принцип разделения интерфейса на независимые блоки.</p>
+			<p>Он позволяет легко и быстро разрабатывать интерфейсы любой сложности и повторно использовать существующий код</p>
+		</div>
+	</section>
+
+	<section class="slide slide_bem-image">
+		<h2>BEM (БЭМ) <small>Block Element Modifier</small></h2>
+		<p>Разделение всех возможных компонентов на 3 сущности</p>
+		<ul class="list">
+			<li class="next">Блок</li>
+			<li class="next">Элемент</li>
+			<li class="next">Модификатор</li>
+		</ul>
+		<figure><img src="https://habrastorage.org/files/dc4/809/03a/dc480903af774eab9370c85e50c8ac72.png" alt=""></figure>
+		<style>
+			.slide_bem-image .list {
+				align-items: justify;
+				justify-content: space-around;
+				display: flex;
+				margin-top: -20px;
+			}
+			.slide_bem-image .list > li {
+				font-weight: bold;
+				text-indent: 0;
+			}
+			.slide_bem-image .list > li:before {
+				display: none;
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2>Блок <small>(BEM)</small></h2>
+		<p class="small">Логически и функционально независимый компонент страницы. Блок полностью самодостаточен: у него может быть свое поведение, шаблоны, стили, документация и не только. Блоки могут использоваться в любом месте страницы, повторно, даже в другом проекте. </p>
+		<p class="small">Одни блоки можно вкладывать в другие, компоновать, использовать для создания более сложных блоков.</p>
+		<figure><img src="https://habrastorage.org/getpro/habr/post_images/569/22d/95c/56922d95c9a9725976d8010279baf919.png" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>Элемент <small>(BEM)</small></h2>
+		<p>Часть блока, которая не может использоваться в отрыве от него и имеет смысл только в рамках своего родителя. Элементы могут быть обязательными и опциональными.</p>
+		<figure><img src="https://habrastorage.org/getpro/habr/post_images/f4f/9c7/a51/f4f9c7a516e679b4dec1e90eb25f6640.png" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>Модификатор <small>(BEM)</small></h2>
+		<p class="small" style="font-size: 1.5rem">Свойство блока или элемента, которое меняет их внешний вид, состояние или поведение. У блока/элемента может быть несколько разных модификаторов одновременно.</p>
+		<figure><img src="https://habrastorage.org/getpro/habr/post_images/81c/325/0b2/81c3250b2a8b7cbb09420e82aed2c34c.png" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>BEM (БЭМ) <small>Block Element Modifier</small></h2>
+		<h3>Правила формирования имени БЭМ-сущности</h3>
+		<p></p>
+		<ul class="small-list">
+			<li>Каждая БЭМ-сущность должна иметь свой класс. <br>(Нюанс а том что б не переопределять теги)</li>
+			<li>CSS-свойства для блоков, элементов и модификаторов описываются только <br>через классы.</li>
+			<li>Для разделения слов в именах используется дефис (-).</li>
+			<li>Элемент отделяется от блока двумя подчеркиваниями (__). <br>Модификатор — одним (_).</li>
+			<li>Имена БЭМ-сущностей записываются с помощью цифр и латинских букв в нижнем регистре.</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>BEM (БЭМ) <small>Block Element Modifier</small></h2>
+		<div class="next">
+			<p>Плюсы:</p>
+			<ul class="small-list">
+				<li>Относительная независимость блоков</li>
+				<li>Избавление от каскадности</li>
+				<li>Избавление от копирования</li>
+			</ul>
+		</div>
+		<div class="next">
+			<p>Минусы:</p>
+			<ul class="small-list">
+				<li>Ужасные css селекторы</li>
+				<li>Черезмерна сложная разработка и поддержка для небольших проектов</li>
+				<li>Жесткая привязка к названиям стилей</li>
+				<li>Инструментарий БЕМ избыточный</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>BEM (БЭМ) <small>Block Element Modifier</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p>БЭМ придуман компанией Яндекс и данная методология создана для покрытия их проблем.</p>
+		<p>Если ваш процесс работы отличается от яндекса, можете забыть про бэм, иначе будете плодить говнокод</p>
+	</section>
+
+	<section class="slide">
+		<h2>BEM (БЭМ) <small>Block Element Modifier</small></h2>
+		<p><strong>Оценка:</strong></p>
+		<table class="assessment">
+      <tr>
+        <th>Понимаемость кода</th><td>2</td>
+      </tr>
+      <tr>
+        <th>Масштабируемость</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Колличество кода</th><td>5</td>
+      </tr>
+      <tr>
+        <th>Поддержка</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Порог вхождения</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Итого:</th><td> 3.6</td>
+      </tr>
+    </table>
+	</section>
+
+
+	<!-- ========================================================== -->
+
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p>Многослойная система организации CSS основана на принципах <br><strong>OOCSS</strong> и <strong>БЭМ</strong>.</p>
+			<p>Модули распределяются по слоям, каждый из которых имеет свой свод правил использования и взаимодействия с другими модулями.</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<p>Блоки вёрстки делятся на модули, каждый из которых сам по себе независим и максимально абстрагирован</p>
+		<figure>
+			<img src="https://habrastorage.org/files/041/ae2/293/041ae229321745fe88c7205e514e5b90.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<p>Блоки вёрстки делятся на модули, каждый из которых сам по себе независим и максимально абстрагирован</p>
+		<p class="double">
+			<img src="http://operatino.github.io/MCSS/images/modules.jpg" alt="">
+			<br>
+			<br>
+			Всего 4 модуля<br>
+			<strong>Фундамент </strong>(Нулевой слой)<br>
+			<strong>Базовый</strong><br>
+			<strong>Проектный</strong><br>
+			<strong>Косметический</strong><br>
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<h3>Компоновка модулей:</h3>
+		<ul class="small-list" style="margin-top: 5px; margin-left: 15px">
+			<li><strong>Нулевой слой, или фундамент</strong> - Фундамент включает в себя ресеты и мало изменяемые стили, которые закладываются в основу вёрстки и применяются на все страницы.</li>
+			<li><strong>Base</strong> - это портальный фреймворк, ядро интерфейса, которое состоит из наиболее переиспользуемых и абстрактных конструкций, например: формы кнопки блоки навигации</li>
+			<li><strong>Project</strong> - Изолированные, проектные модули, из которых в дальнейшем собирается страница: форма регистрации блок логина корзина товаров, гриды</li>
+			<li><strong>Cosmetic</strong> - простые, мало влияющие стили: цвета ссылок Простые OOCSS селекторы</li>
+		</ul>
+	</section>
+
+	
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<p class="">Очень важна иерархия взаимодействия слоев.</p>
+		<figure><img style="height: 400px" src="http://operatino.github.io/MCSS/images/layers.jpg" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<p>Структура файлов имеет следующий вид</p>
+		<figure><img style="height: 350px" src="http://operatino.github.io/MCSS/images/file-system.png" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<div class="next">
+			<p>Плюсы:</p>
+			<ul class="small-list">
+				<li>Понятная и приятная архитектура и логическая компоновка файлов</li>
+				<li>Уменьшение кода за счет использования концепции OOCSS</li>
+				<li>Более легкая в поддержке за счет подхода БЕМ</li>
+			</ul>
+		</div>
+		<div class="next">
+			<p>Минусы:</p>
+			<ul class="small-list">
+				<li>Важна иерархия слоев</li>
+				<li>Не очень красивый код</li>
+				<li>Для полноценной реализации нужно иметь опыт в 2х методологиях</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p>Хороший подход более красивый чем бем и более функциональный чем OOCSS. Подходит почти для всех проектов из за гибкости</p>
+  	<p>Или если вы просто нормально не знаете ни БЭМ ни OOCSS методологий</p>
+	</section>
+
+	<section class="slide">
+		<h2>MCSS <small>Multilayer CSS</small></h2>
+		<p><strong>Оценка:</strong></p>
+		<table class="assessment">
+      <tr>
+        <th>Понимаемость кода</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Масштабируемость</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Колличество кода</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Поддержка</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Порог вхождения</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Итого:</th><td>3.4</td>
+      </tr>
+    </table>
+	</section>
+
+
+	<!-- ========================================================== -->
+
+
+	<section class="slide">
+		<h2>AMCSS<small> Attribute module css</small></h2>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p>Вынести модули из CSS классов в аттрибуты</p>
+			<p>Довольно необычный подход к верстке и организации CSS при котором обращение к классам заменяется на HTML аттрибуты.</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>AMCSS<small> Attribute module css</small></h2>
+		<p>Примерно так выглядит такой подход</p>
+		<figure>
+			<img src="https://habrastorage.org/files/9ee/1d0/988/9ee1d098849a4b04ad300e32a6d17099.png" alt="">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>AMCSS<small> Attribute module css</small></h2>
+		<div class="next">
+			<p>Плюсы:</p>
+			<ul class="small-list">
+				<li>При должной фантзии и этого подхода можно делать довольно интересные вещи</li>
+			</ul>
+		</div>
+		<div class="next">
+			<p>Минусы:</p>
+			<ul class="small-list">
+				<li>Для хорошей работы нужно комбинировать с какой либо другой методологией</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>AMCSS<small> Attribute module css</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p>Если вы все уже перепробовали и хотите разнообразить <br>свою <strike>сексуальную жизнь</strike> верстку можете выбрать этот подход</p>
+	</section>
+
+	<section class="slide">
+		<h2>AMCSS<small> Attribute module css</small></h2>
+		<p><strong>Оценка:</strong></p>
+		<table class="assessment">
+      <tr>
+        <th>Понимаемость кода</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Масштабируемость</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Колличество кода</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Поддержка</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Порог вхождения</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Итого:</th><td>3</td>
+      </tr>
+    </table>
+	</section>
+
+	<!-- ========================================================== -->
+
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p><strong>SMACSS</strong> расшифровывается как «масштабируемая и модульная архитектура для CSS» (Scalable and Modular Architecture for CSS). </p>
+			<p>Подход предлагает разделить стили на 5 частей<br> (в порядке включения их в документ)</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<p><strong>Компоновка модулей</strong></p>
+		<ul class="small-list">
+			<li alt="html, body, a, a:hover">Base - Стили ко всем семантическим или базовым стилям CSS без использования классов</li>
+			<li alt="поощрять использование id или префикса l-">Layout - Основные компоненты #header, #article, #footer</li>
+			<li alt="Документация SMACSS рассматривает модули как большинство ваших элементов и, следовательно, не требует, чтобы вы их префикс, но вы можете сделать это, если вы выберете.">Module - Многоразовым модульным элементом в дизайне</li>
+			<li>State - Состояния любых компонентов, используется с префиксом is- <br>(is-active, is-inactive, is-expanded, is-hidden)</li>
+			<li>Theme - Используется если у вас есть различные шаблоны тем</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<p><strong>Компоновка модулей</strong></p>
+		<figure><img src="https://habrastorage.org/files/4dc/24a/8dc/4dc24a8dc3fb4e758adf89af4f73f66c.png" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<div class="next">
+			<p>Плюсы:</p>
+			<ul class="small-list">
+				<li>Подход предлагает правильные рекомендации для модульного и поддерживаемого CSS-кода, избегая при этом излишних предписаний</li>
+				<li>Система достаточно гибкая, чтобы работать с крупными и маленькими проектами.</li>
+				<li>Легкий в освоении</li>
+				<li>Хорошая модульность</li>
+			</ul>
+		</div>
+		<div class="next">
+		<p>Минусы:</p>
+			<ul class="small-list">
+				<li>Семантический подход</li>
+				<li>Ограниченная вложенность</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p>Хорошая методология, очень логическое разделение компонентов сайта, но такой подход поошряет использование семантических элементов и обращение к id</p>
+	</section>
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p>Хорошая методология, очень логическое разделение компонентов сайта, но такой подход поошряет использование семантических элементов и обращение к id</p>
+	</section>
+
+	<section class="slide">
+		<h2>SMACSS <small>Scalable, Modular Architecture CSS</small></h2>
+		<p><strong>Оценка:</strong></p><table class="assessment">
+      <tr>
+        <th>Понимаемость кода</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Масштабируемость</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Колличество кода</th><td>3</td>
+      </tr>
+      <tr>
+        <th>Поддержка</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Порог вхождения</th>4<td></td>
+      </tr>
+      <tr>
+        <th>Итого:</th><td>3.8</td>
+      </tr>
+    </table>
+	</section>
+
+	<!-- ========================================================== -->
+
+
+	<section class="slide">
+		<h2>RSCSS <small>Reasonable System for CSS</small></h2>
+		<p>Разумная система для структуры стилей CSS.</p>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p>Реализация модульности за счет вложенности елементов в модуле</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>RSCSS <small>Reasonable System for CSS</small></h2>
+		<p>&nbsp;</p>
+		<p class="double">
+			<img src="https://cdn-images-1.medium.com/max/631/1*FkjK8l0u0GN2PM59i2FpjQ.png" alt="">
+			<br>
+			<br>
+			Примерно так будет выглядеть код модуля при использовании такого подхода
+		</p>
+	</section>
+
+	<section class="slide">
+		<h2>RSCSS <small>Reasonable System for CSS</small></h2>
+		<h3>Компоновка модулей</h3>
+		<ul class="list">
+			<li class="Модули"><strong>Component</strong> - Независимые блоки</li>
+			<li><strong>Element</strong> - Составные части модулей, не существую вне модуля</li>
+			<li alt="Header, Footer, Гриды"><strong>Layout</strong> - Слои приложения. Расположение областей</li>
+			<li><strong>Variant</strong> - Модификаторы или состояния</li>
+			<li><strong>Helpers</strong> - Вспомогательные элементы</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>RSCSS <small>Reasonable System for CSS</small></h2>
+		<div class="next">
+			<p>Плюсы:</p>
+			<ul class="small-list">
+				<li>Среднее между БЭМ и SMACSS</li>
+				<li>Более лаконичное написание кода</li>
+				<li>Еще более назависимые стили</li>
+				<li>Легкост в написании</li>
+				<li>Отлично подходит для небольших и средних проектов</li>
+			</ul>
+		</div>
+		<div class="next">
+			<p>Минусы:</p>
+			<ul class="small-list">
+				<li>Каскадность. При большой вложенности создает больше проблем</li>
+				<li>DRY - это не про этот подход</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>RSCSS <small>Reasonable System for CSS</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p>Один из самых легких в освоении, и гибкий в написании и поддержке подход. </p>
+		<p>В добавок стиль написания довольно красивый если не будет большой каскадности</p>
+	</section>
+	
+	<section class="slide">
+		<h2>RSCSS <small>Reasonable System for CSS</small></h2>
+		<p><strong>Оценка:</strong></p>
+		<table class="assessment">
+      <tr>
+        <th>Понимаемость кода</th><td>5</td>
+      </tr>
+      <tr>
+        <th>Масштабируемость</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Колличество кода</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Поддержка</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Порог вхождения</th><td>5</td>
+      </tr>
+      <tr>
+        <th>Итого:</th><td>4.4</td>
+      </tr>
+    </table>
+	</section>
+
+
+	<!-- ========================================================== -->
+
+
+	<section class="slide">
+		<h2>Atomic CSS <small>Атомарный CSS</small></h2>
+		<p>OOCSS, возведенный в абсолют</p>
+		<div class="next">
+			<h3>Концепция:</h3>
+			<p>Для каждого отдельного свойства должен быть создан отдельный класс</p>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Atomic CSS <small>Атомарный CSS</small></h2>
+		<p>Для каждого атомарного класса в файле CSS создается соотвецтвующий CSS класс с этим свойством</p>
+		<figure><img style="width: 90%" src="https://image.prntscr.com/image/9N8d1vjKTSWJkdtU9Hderw.png" alt=""></figure>
+	</section>
+
+	<section class="slide">
+		<h2>Atomic CSS <small>Атомарный CSS</small></h2>
+		<p>Плюсы:</p>
+		<div class="next">
+		<ul class="small-list">
+			<li>Действительно уменьшает колличество кода на больших и очень больших проектах</li>
+			<li>Все...</li>
+		</ul>
+		</div>
+		<div class="next">
+		<p>Минусы:</p>
+		<ul class="small-list">
+			<li>Нечитабельный код</li>
+			<li>Полное игнорирование разделения верстки и стилей</li>
+			<li>Практически отсутствует удобная переиспользуемость компонентов</li>
+			<li>Рефакторинг более менее большого проекта ... - ну вы поняли...</li>
+		</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Atomic CSS <small>Атомарный CSS</small></h2>
+		<h3>Мнение редакции:</h3>
+		<p class="double small">
+			Если ваш сайт похож на это, можете использовать этот подход.<br><br>
+			<img style="" src="http://marketing.by/upload/images_old/market/news/awful_sites_03.jpg" alt=""><br>
+			Или если хотите пропитаться духом 1996го года, этот подход для вас<br><br>
+			Но не смотря на такие минусы, все же при должном уровне владением автоматизацией и фантазии можно так же придумать хорошооптимизированные подходы</p>
+	</section>
+
+	<section class="slide">
+		<h2>Atomic CSS <small>Атомарный CSS</small></h2>
+		<p><strong>Оценка:</strong></p>
+		<table class="assessment">
+      <tr>
+        <th>Понимаемость кода</th><td>1</td>
+      </tr>
+      <tr>
+        <th>Масштабируемость</th><td>2</td>
+      </tr>
+      <tr>
+        <th>Колличество кода</th><td>5</td>
+      </tr>
+      <tr>
+        <th>Поддержка</th><td>2</td>
+      </tr>
+      <tr>
+        <th>Порог вхождения</th><td>4</td>
+      </tr>
+      <tr>
+        <th>Итого:</th><td>2.8</td>
+      </tr>
+    </table>
+	</section>
+
+	<section class="slide">
+		<h2>Итоги:</h2>
+		<p class="small" style="font-size: 1.6rem">Как видите, подходов к организации вашего CSS очень много, на любой вкус и цвет. Но у всех в той или иной степени есть свои плюсы и минусы, и нет универсального решения.</p>
+		<p class="small" style="font-size: 1.6rem">Важно знать и иметь общее представление о существующих методологиях, для того что б вы могли понимать для какого проекта, какой подход больше подойдет</p>
+		<p class="small" style="font-size: 1.6rem">Но главное это то что <strong>правильное</strong> и <strong>уместное</strong> использование методологий сделает вашу работу и работу вашей команды с CSS намного приятнее </p>
+	</section>
+
+	<section class="slide end">
+		<h2>Материалы</h2>
+		<p class="double small">
+			<a target="_blank" href="https://habrahabr.ru/post/256109/">Способы организации CSS-кода</a><br>
+			<a target="_blank" href="https://willianjusten.com.br/falando-sobre-rscss/">Подробнее про RSCSS</a><br>
+			<a target="_blank" href="https://rhr.me/pres/mcss/">Презентация MCSS</a><br>
+			<a target="_blank" href="https://habrahabr.ru/company/yandex/blog/276035/">БЭМ-методология</a><br>
+			<a target="_blank" href="https://habrahabr.ru/post/270075/">БЭМ — методология развешивания костылей</a><br>
+			<a target="_blank" href="https://www.sitepoint.com/bem-smacss-advice-from-developers/">BEM vs SMACSS</a><br>
+			<a target="_blank" href="http://html5.by/blog/bem-amcss-oocss-atomiccss-opor-mcss-smacss-fun-docssa-video/">Методологии верстки</a><br>
+			<a target="_blank" href="https://medium.com/@stepanovv.ru/%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-css-oocss-smacss-bem-%D0%B8-sass-49351a119283">Правильный CSS</a>
+		</p>
+		<style>
+		 .end a {
+		 	white-space: nowrap;
+		 }
+		</style>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+
+</body>
+</html>
