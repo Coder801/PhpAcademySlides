@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="node_modules/shower-ribbon/styles/screen-16x10.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+	<link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/atom-one-dark.css">
+
+	<style>
+		.hljs-doctag,
+		.hljs-keyword,
+		.hljs-formula {
+			color: rgb(198, 120, 221) !important;
+		}
+		.hljs-variable {
+			color: #abb2bf !important;
+			font-weight: normal !important;
+		}
+		pre mark {
+			color: #fff !important;
+		}
+		.mark {
+			background-color: #282c34 !important;
+			padding: 1px 5px;
+			color: #fff;
+			border-radius: 4px;
+		}
+		.hljs-tag {
+			color: #e06c75 !important;
+		}
+		.slide code.hljs {
+			background-color: #282c34;
+			border: none !important;
+			margin-bottom: -1px !important;
+			margin-top: 0 !important;
+			padding-bottom: 0 !important;
+			padding-top: 0 !important;
+		}
+		.slide .left {
+			margin-right: 60px;
+		}
+		.slide .left pre code {
+			width: auto;
+		}
+		.slide p mark, .slide table mark {
+			background-color: #cd0000 !important;
+			border-radius: 3px;
+			display: inline-block;
+			color: #fff !important;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			line-height: 1.4;
+		}
+
+		.slide pre code:first-child {
+			padding-top: 10px !important;
+		}
+		.slide pre code:last-child {
+			padding-bottom: 10px !important;
+		}
+	</style>
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Препроцессоры</h1>
+		<p>Dmitriy Onishchenko</p>
+	</header>
+
+	<section class="slide">
+		<h2>Подготовка</h2>
+		<ul>
+			<li>Установленный NodeJS</li>
+			<li>Установленный NPM</li>
+			<li>Базовые знание консоли</li>
+			<li>Базовые знания HTML/CSS/JS</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Что такое Препроцессор</h2>
+		<p style="font-size: 22px;"><strong>Препроцессор (Preprocessor)</strong> — это инструмент, преобразующий код из одного синтаксиса в другой.</p>
+		<p style="font-size: 22px;">Обычно, на вход препроцессора поступает код, написанный с использованием синтаксических конструкций, понятных этому препроцессору.</p>
+		<p style="font-size: 22px;"><strong>CSS препроцессор</strong> — это надстройка над CSS, которая добавляет ранее недоступные возможности для CSS, с помощью новых синтаксических конструкций.</p>
+	</section>
+
+	<section class="slide">
+		<h2>Для чего они нужны?</h2>
+		<p>Препроцессоры помогают оптимизировать рутинные задачи и помогают сделать код более читабельным</p>
+		<ul>
+			<li>Простота</li>
+			<li>Структура и логичность кода</li>
+			<li>Примеси (Mixins)</li>
+			<li>Модульность</li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Разновидности препроцессоров</h2>
+		<div class="double">
+			<p style="font-size: 30px;">Популярные</p>
+			<ul style="font-size: 30px;">
+				<li>Less</li>
+				<li>Sass (SCSS)</li>
+				<li>Stylus</li>
+				<li>PostCSS</li>
+			</ul>
+			<p style="font-size: 30px;">Менее популярные</p>
+			<ul style="font-size: 30px;">
+				<li>CSS Crush</li>
+				<li>Clo­sure Stylesheets</li>
+			</ul>
+		</div>
+	</section>
+
+	<section class="slide">
+		<h2>Компиляция</h2>
+		<ul style="font-size: 20px;">
+			<li>Компиляция при помощи скрипта</li>
+			<li>Приложения для компиляции
+				<ol>
+					<li>Prepros</li>
+					<li>CodeKit (только OS X)</li>
+					<li>Mixture</li>
+					<li>Koala</li>
+				</ol>
+			</li>
+			<li>При помощи Редакторов\IDE</li>
+			<li>Через командную строку</li>
+			<li><strong>При помощи сборщиков (Gulp/Grunt/Webpack)</strong></li>
+		</ul>
+	</section>
+
+	<section class="slide">
+		<h2>Возможности (На примере SASS)</h2>
+		<p>Sass позволяет использовать функции недоступные в самом CSS, например, переменные, вложенности, миксины, наследование и другие приятные вещи, возвращающие удобство написания CSS.</p>
+		<p>Как только Вы начинаете пользоваться Sass, препроцессор обрабатывает ваш Sass-файл и сохраняет его как простой CSS-файл, который Вы сможете использовать на любом сайте.</p>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">SASS Demo</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Материалы</h2>
+		<ul>
+			<li><a href="https://mrmlnc.gitbooks.io/less-guidebook-for-beginners/content/">LESS Путеводитель для новичка</a></li>
+			<li><a href="http://kizu.ru/preprocessors/">Препроцессоры</a></li>
+			<li><a href="https://sass-scss.ru/guide/">SASS Guide</a></li>
+		</ul>
+	</section>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
